@@ -1,0 +1,14 @@
+{
+  "requirements": {
+    "SRC-003:R001": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-3 closed with verification evidence in LOG: verify -> PASS [target: T-3] conf: high -- 15 tests pass, clean export reproducible, byte-identical mirror",
+      "text": "@[SAIHANDOFF_VAC34_AE_P0_RECOVERY,_ENGINE_INTEGRITY_AND_HONEST_RELEASE_20261107_144351_d0ca3cfb.md]",
+      "verification": "the Work this request created reached its own verification gate; see the T-3 VERIFY cycle in .saipen/LOG.md",
+      "work": "T-3"
+    }
+  },
+  "schema_version": 1
+}

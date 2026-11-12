@@ -1,0 +1,40 @@
+{
+  "archive_ref": ".saipen/archive/source/SRC-003.md",
+  "closed_at": "2026-11-07T12:49:26Z",
+  "closure_event": null,
+  "linked_work": "T-3",
+  "receipt_id": "SRC-003",
+  "received_at": "2026-11-07T12:44:24Z",
+  "redaction": {
+    "applied": false,
+    "authoritative": false,
+    "original_sha256": "698b4e03c77e4e0498493be575fd3350032dc0300ce2d5afacfc398035d0916f",
+    "sanitized_sha256": "698b4e03c77e4e0498493be575fd3350032dc0300ce2d5afacfc398035d0916f"
+  },
+  "request_provenance": {
+    "carrier_integrity": "MATCHED",
+    "compared_digest": "fc49aed9a64dca08d77cdf52a49647acb305503fea62084365da33211efa0f1f",
+    "declared_by": "host_ingress",
+    "ingress_id": "ing-a3a008113365cedb",
+    "message_id": "4",
+    "session_id": "f24919a2-20e6-450b-b516-cdc1fa4b7ef9",
+    "witness": "model_supplied"
+  },
+  "reread_at": "2026-11-07T12:49:26Z",
+  "schema_version": 1,
+  "sensitive": false,
+  "source_authority": {
+    "body_sha256": "698b4e03c77e4e0498493be575fd3350032dc0300ce2d5afacfc398035d0916f",
+    "mode": "exact",
+    "original_available": true
+  },
+  "source_kind": "user_instruction",
+  "source_sha256": "698b4e03c77e4e0498493be575fd3350032dc0300ce2d5afacfc398035d0916f",
+  "status": "CLOSED",
+  "storage_status": "ARCHIVED",
+  "transport": {
+    "newline_normalization": "none",
+    "source_encoding": "utf-8",
+    "transport_transform": "none"
+  }
+}

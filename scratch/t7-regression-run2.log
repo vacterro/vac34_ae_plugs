@@ -1,0 +1,46 @@
+test_r100_portable_tests_never_require_personal_windows_paths (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r100_portable_tests_never_require_personal_windows_paths)
+R100: any personal-drive/deployment path in the portable suite is gated. ... ok
+test_r101_clean_archive_rebuild_independent_of_live_deployment (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r101_clean_archive_rebuild_independent_of_live_deployment)
+R101: clean ZIP rebuild must not depend on the live deployment env. ... skipped 'Skipping nested export during export verification'
+test_r102_real_windows_deployment_hashes (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r102_real_windows_deployment_hashes)
+R102 (gated): real Live/Mirror hashes via scripts/manage.py verify. ... skipped 'NOT_RUN: R102 requires opt-in deployment check on this Windows machine (VAC34_DEPLOYMENT_CHECK=1 python scripts/manage.py verify).'
+test_r103_no_false_success_for_unsupported_pinned_recipe (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r103_no_false_success_for_unsupported_pinned_recipe)
+R103: an unsupported pinned recipe never reports ok/APPLIED. ... ok
+test_r104_glow_threshold_audio_mapping_real_ae (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r104_glow_threshold_audio_mapping_real_ae) ... skipped 'NOT_RUN: R104 requires After Effects 2024 (Glow Threshold reactivity). Run tests/ae_runtime/host_smoke_test.jsx in the AE host (Wave H).'
+test_r105_shared_master_rig_survives_save_reopen (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r105_shared_master_rig_survives_save_reopen) ... skipped 'NOT_RUN: R105 requires real project save/reopen in After Effects 2024.'
+test_r83_pinned_rejects_2d_recipe_on_1d_threshold (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r83_pinned_rejects_2d_recipe_on_1d_threshold) ... ok
+test_r84_pinned_does_not_bypass_cansetexpression (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r84_pinned_does_not_bypass_cansetexpression) ... ok
+test_r85_pinned_applies_correct_scalar_recipe (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r85_pinned_applies_correct_scalar_recipe) ... ok
+test_r86_pinned_rejects_unsupported_propertyvaluetype (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r86_pinned_rejects_unsupported_propertyvaluetype) ... ok
+test_r87_pinned_master_update_changes_master_controls_only (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r87_pinned_master_update_changes_master_controls_only) ... ok
+test_r88_pinned_perlayer_update_changes_targetlayer_controls_only (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r88_pinned_perlayer_update_changes_targetlayer_controls_only) ... ok
+test_r89_update_no_false_success_on_wrong_owner (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r89_update_no_false_success_on_wrong_owner) ... ok
+test_r90_pinned_remove_cleans_unreferenced_controls (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r90_pinned_remove_cleans_unreferenced_controls) ... ok
+test_r91_pinned_remove_preserves_shared_controls_with_consumers (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r91_pinned_remove_preserves_shared_controls_with_consumers) ... ok
+test_r92_remove_never_deletes_unrelated_effects (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r92_remove_never_deletes_unrelated_effects) ... ok
+test_r93_repeated_apply_remove_no_orphan_accumulation (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r93_repeated_apply_remove_no_orphan_accumulation) ... ok
+test_r94_narrow_panel_action_buttons (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r94_narrow_panel_action_buttons) ... ok
+test_r95_real_ae_scroll_viewport (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r95_real_ae_scroll_viewport) ... skipped 'NOT_RUN: R95 requires a real After Effects 2024 docked ScriptUI viewport to prove clipping/scrolling (Wave D host geometry).'
+test_r96_recipe_change_recomputes_scroll_geometry (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r96_recipe_change_recomputes_scroll_geometry) ... ok
+test_r97_audio_source_identity_survives_refresh (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r97_audio_source_identity_survives_refresh) ... ok
+test_r98_duplicate_audio_names_never_silently_relink (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r98_duplicate_audio_names_never_silently_relink) ... ok
+test_r99_focus_change_does_not_retarget_pinned_property (tests.unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r99_focus_change_does_not_retarget_pinned_property) ... ok
+test_r71_mode_rendered_as_dropdown_with_labels (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r71_mode_rendered_as_dropdown_with_labels) ... ok
+test_r72_fixed_chrome_and_scroll_range (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r72_fixed_chrome_and_scroll_range) ... ok
+test_r73_unexpected_handler_exception_is_visible (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r73_unexpected_handler_exception_is_visible) ... ok
+test_r74_pinned_composition_survives_focus_change (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r74_pinned_composition_survives_focus_change) ... ok
+test_r74b_ui_shows_pinned_comp_marker (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r74b_ui_shows_pinned_comp_marker) ... ok
+test_r75_pinned_target_reacquired_after_addproperty (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r75_pinned_target_reacquired_after_addproperty) ... ok
+test_r76_duplicate_effect_rejected_by_pin_resolution (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r76_duplicate_effect_rejected_by_pin_resolution) ... ok
+test_r77_audio_status_states (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r77_audio_status_states) ... ok
+test_r78_partial_batch_status (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r78_partial_batch_status) ... ok
+test_r79_pinned_apply_and_remove (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r79_pinned_apply_and_remove) ... ok
+test_r80_no_fake_audio_selection (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r80_no_fake_audio_selection) ... ok
+test_r81_build_fingerprint_stable_and_manifest_consistent (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r81_build_fingerprint_stable_and_manifest_consistent) ... ok
+test_r82_parameter_validation_before_apply (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r82_parameter_validation_before_apply) ... ok
+test_r83_pinned_update_not_silent_noop (tests.unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r83_pinned_update_not_silent_noop) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 1.879s
+
+OK (skipped=5)

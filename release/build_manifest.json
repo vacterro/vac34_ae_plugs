@@ -1,0 +1,23 @@
+{
+  "product": "vac34_AE",
+  "version": "0.0.1",
+  "build_fingerprint": "0.0.1+66244487217f",
+  "sha256": "e3e50ec904e2aa9c5293873c70e03f3ac82b4b84da1dfa74d1a6a79d085809bd",
+  "file_size_bytes": 279247,
+  "dist_file": "V:\\___VAC\\__K\\__CODE\\_PLUG_SCRIPT\\vac34_ae_plugs\\dist\\vac34_AE.jsx",
+  "release_file": "V:\\___VAC\\__K\\__CODE\\_PLUG_SCRIPT\\vac34_ae_plugs\\release\\vac34_AE_v0.0.1.jsx",
+  "source_files": [
+    "src/core/Config.js",
+    "src/adapters/AEDom.js",
+    "src/adapters/TargetResolver.js",
+    "src/controllers/ControllerManager.js",
+    "src/audio/AudioEngine.js",
+    "src/recipes/RecipeRegistry.js",
+    "src/presets/PresetManager.js",
+    "src/diagnostics/Diagnostics.js",
+    "src/core/Engine.js",
+    "src/panel/UIBuilder.js",
+    "src/main.js"
+  ],
+  "built_at": "2026-11-07T12:00:00Z"
+}

@@ -1,0 +1,14 @@
+{
+  "clauses": {
+    "SRC-003:R001": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "@[SAIHANDOFF_VAC34_AE_P0_RECOVERY,_ENGINE_INTEGRITY_AND_HONEST_RELEASE_20261107_144351_d0ca3cfb.md]"
+    }
+  },
+  "derived_at": "2026-11-07T12:49:26Z",
+  "derived_from": "SRC-003",
+  "interpretation_revision": 1,
+  "schema_version": 1,
+  "source_sha256": "698b4e03c77e4e0498493be575fd3350032dc0300ce2d5afacfc398035d0916f"
+}

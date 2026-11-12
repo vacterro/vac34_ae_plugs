@@ -1,0 +1,45 @@
+{
+  "blocking_findings": {
+    "problem_count": 1,
+    "problems": [
+      {
+        "category": null,
+        "credential": false,
+        "detail": "improve report [improve-report] -- .saipen\\improve\\imp-vac34_ae_plugs-20261107-2\\saipen-01\\saipen_improve_SAIPEN.md: report protocol_fingerprint 'sha256:bc763ae4ab3c7738f5aa2e8205143f366edf53f9d47b953",
+        "detail_hash": "ca7e888dc958023b",
+        "finding_key": "76b48f23558dce11",
+        "rule_id": "unclassified",
+        "severity": "problem",
+        "subject_id": null,
+        "subject_kind": "global",
+        "subject_ref": null
+      }
+    ],
+    "ruleset_fingerprint": "9a47d608ed3f3a833348aaeeca5cd9e9076f3bf53b1ef92b6ade46958e3e3fec",
+    "ruleset_version": 2,
+    "status": "complete",
+    "warning_count": 9
+  },
+  "board_hash": "d7d46850108be1fd",
+  "canonical_next_command": "saipen improve reconcile imp-vac34_ae_plugs-20261107-2",
+  "content_hash": "06b570e028544a1e",
+  "exit_code": 1,
+  "external_actions": [],
+  "gate": "core",
+  "install_fingerprint": "install-v1:3e5e0f7d7eb999ccdedcdaa30ca8886e6a29b22eedc677410ce611416ecc2281",
+  "install_home": "C:\\ProgramData\\SAI\\SAIPEN\\runtime\\18604c19a6ad5da5",
+  "kind": "conformance_receipt",
+  "log_hash": "951fd43751fc6ade",
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "receipt_id": "receipt-67d6c36cfe7c",
+  "remediation_commands": [
+    "saipen improve reconcile imp-vac34_ae_plugs-20261107-2"
+  ],
+  "schema_version": 2,
+  "source_head": "no-git",
+  "source_tree_fingerprint": "no-git-tree-v1:bc2b13850802ffd82ef3dbc9359eb40361551623ea913ce474003308f1be19d3",
+  "state_hash": "19371f90f6616054",
+  "timestamp_utc": "2026-11-11T22:00:19.214485Z",
+  "validator_protocol_version": "1",
+  "verdict": "FAIL"
+}

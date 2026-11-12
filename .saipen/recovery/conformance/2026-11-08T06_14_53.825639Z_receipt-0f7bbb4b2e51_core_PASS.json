@@ -1,0 +1,30 @@
+{
+  "blocking_findings": {
+    "problem_count": 0,
+    "problems": [],
+    "ruleset_fingerprint": "9a47d608ed3f3a833348aaeeca5cd9e9076f3bf53b1ef92b6ade46958e3e3fec",
+    "ruleset_version": 2,
+    "status": "complete",
+    "warning_count": 9
+  },
+  "board_hash": "911c7800242a251f",
+  "canonical_next_command": null,
+  "content_hash": "3d71aedde8118731",
+  "exit_code": 0,
+  "external_actions": [],
+  "gate": "core",
+  "install_fingerprint": "install-v1:d70da088c9c58c415fbc8678598049a187735c135d7952d607dc739403eceeea",
+  "install_home": "C:\\ProgramData\\SAI\\SAIPEN\\runtime\\481789cd34cc6f29",
+  "kind": "conformance_receipt",
+  "log_hash": "4f3bceca926224a4",
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "receipt_id": "receipt-0f7bbb4b2e51",
+  "remediation_commands": [],
+  "schema_version": 2,
+  "source_head": "no-git",
+  "source_tree_fingerprint": "no-git-tree-v1:18aebe3902db6cbd18e4a9aa49092948951d30395eee9e41f39fa75286324b2a",
+  "state_hash": "fe00cc387957de3b",
+  "timestamp_utc": "2026-11-08T06:14:53.825639Z",
+  "validator_protocol_version": "1",
+  "verdict": "PASS"
+}

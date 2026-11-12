@@ -1,0 +1,19 @@
+{
+  "event_id": "E-78",
+  "externalization_event": {
+    "operation_id": "checkpoint-c2881881cc8a4515a9057d3edd6094aa",
+    "reason": "new LOG event exceeds the live cap; canonical detail externalization"
+  },
+  "lossless": true,
+  "metadata_path": ".saipen/recovery/log-detail/E-78-9a336dcc1bb2525d5e8be63d.json",
+  "operation": "log_event_externalization",
+  "original_event_bytes": 1329,
+  "original_event_path": ".saipen/recovery/log-detail/E-78-9a336dcc1bb2525d5e8be63d.LOG.md",
+  "original_event_sha256": "9a336dcc1bb2525d5e8be63dec49739b9fc9f5f1450d599d3c0582a8f2ecd815",
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "project_lineage": "lineage-bd0fe1a39fe1441f88a83421ede30e5c",
+  "schema_version": 1,
+  "source": ".saipen/LOG.md",
+  "status": "COMMITTED",
+  "ticket_id": "T-7"
+}

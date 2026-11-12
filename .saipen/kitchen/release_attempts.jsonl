@@ -1,0 +1,2 @@
+{"code": "STALE_PLAN", "detail": "cannot determine the current branch", "invocation": "ship", "kind": "release-attempt", "mode": "", "op_id": "", "outcome": "REFUSED_STALE_PLAN", "recorded_at": "2026-11-12T05:59:39Z", "schema_version": 1, "ticket": ""}
+{"code": "STALE_PLAN", "detail": "cannot determine the current branch", "invocation": "push", "kind": "release-attempt", "mode": "", "op_id": "", "outcome": "REFUSED_STALE_PLAN", "recorded_at": "2026-11-12T06:00:01Z", "schema_version": 1, "ticket": ""}

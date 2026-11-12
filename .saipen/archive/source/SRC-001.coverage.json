@@ -1,0 +1,509 @@
+{
+  "requirements": {
+    "SRC-001:R001": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Open After Effects.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R002": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Open the vac34_AE panel.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R003": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Select one or multiple layers.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R004": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Search or choose an expression behavior.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R005": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Adjust parameters using sliders, numeric inputs, dropdowns, toggles, colors, and other appropriate controls.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R006": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Click Apply.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R007": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Immediately receive the intended animation behavior.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R008": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Adjust that behavior afterward without manually editing expression code.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R009": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Combine compatible behaviors.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R010": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Save reusable presets. The application must behave like a coherent tool, not a folder containing hundreds of scripts. You are authorized to create and modify files belonging to the new vac34_AE project, run non-invasive tests, build releases, and deploy owned artifacts to the identified After Effects 2024 installation and the requested backup mirror, provided permissions allow it. Do not modify unrelated projects, user compositions, third-party plugins, or existing application files. Do not invent success, skip required verification, or claim a feature works because its source code appears reasonable. Inspect the environment, create an implementation plan, execute it, test it, repair failures, and deliver a usable installation. Do not stop merely because a milestone or ticket is marked DONE. Continue toward the actual mission goal while authorized work remains. Never bypass actual permission restrictions, administrative controls, or safety boundaries. ---",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R011": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE \u2014 V3 ANNOTATED.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R012": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "AE Expressions \u2014 Beat Sync Bible, extensive edition with advanced techniques and troubleshooting.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R013": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "AE Expressions \u2014 Beat Sync Bible v2, annotated and reorganized edition. Treat these as the authoritative supplied source material for the first catalog-building campaign. They contain approximately 740 fenced code examples in total. Important: this does not mean 740 unique, valid, independent expressions. The sources include duplicates, overlapping implementations, explanatory snippets, incomplete workflows, conceptual recipes, and potentially incorrect expressions. If these documents are not present in the execution environment, search the accessible workspace and authorized provided attachments. Do not fabricate their contents. If unavailable, create a working starter catalog from independently verified implementations, record SOURCE_MISSING for the unattainable material, and clearly report that full Bible ingestion remains incomplete.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R014": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Recipe definition.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R015": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "UI presentation.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R016": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Property compatibility.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R017": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Controller creation.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R018": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Expression output. This structure must support future additions without rewriting the entire panel. ---",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R019": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Validate source tree.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R020": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Validate catalog schema.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R021": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Parse available source documents.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R022": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Generate normalized catalog.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R023": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Validate recipes.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R024": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Detect duplicate IDs.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R025": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Validate controller references.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R026": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Generate expression templates.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R027": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Assemble ExtendScript-compatible source.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R028": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Validate generated syntax.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R029": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Generate a versioned release.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R030": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Produce checksums.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R031": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Generate build manifest.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R032": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Run available automated tests.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R033": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Stage deployment artifacts.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R034": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Deploy when all required gates pass.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R035": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Synchronize the recovery mirror.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R036": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Verify deployed files.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R037": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Report status and evidence.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R038": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "The project exists in the requested development root.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R039": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "The architecture decision is documented.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R040": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "A working dockable panel has been built.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R041": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "The panel exposes actual configurable expression behaviors.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R042": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Expression parameters can be adjusted through controls instead of routine manual code editing.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R043": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Safe application and removal work.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R044": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Existing unrelated expressions and animation are protected.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R045": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Multi-layer application works.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R046": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "The supported audio workflow works.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R047": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "A usable recipe catalog exists.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R048": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Source import and provenance are accounted for.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R049": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Automated validation passes.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R050": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Required available AE runtime tests pass.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R051": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "The builder produces the release artifact.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R052": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "The correct live AE installation location is identified.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R053": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "The primary deployment succeeds, or a real deployment blocker is reported.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R054": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "The recovery mirror is synchronized and verified, or a real blocker is reported.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R055": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "Known limitations and unfinished source recipes are explicitly documented.",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    },
+    "SRC-001:R056": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "E-5",
+      "text": "There are no known unresolved critical defects in the functionality claimed as completed. Do not report 100% catalog coverage simply because all source blocks were parsed. Do not report production-ready if the actual host UI has never been tested. Use explicit status categories: - VERIFIED - IMPLEMENTED_UNVERIFIED - PARTIAL - BLOCKED - FAILED ---",
+      "verification": "python -m unittest discover -s tests -p 'test_*.py' -> PASS",
+      "work": "T-1"
+    }
+  },
+  "schema_version": 1
+}

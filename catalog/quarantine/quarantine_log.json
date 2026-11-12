@@ -1,0 +1,2173 @@
+[
+  {
+    "id": "bible_v1_b0039",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 384,
+    "end_line": 389,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 📐 2. SCALE & PROPORTIONS > 2.19 Elastic Rubber Scale (Inertial Pull)",
+    "raw_code": "const target = linear(thisComp.layer(\"Audio\").effect(\"Both\")(\"Slider\"), 0, 20, 100, 150);\nconst current = value[0];\nconst spring = current + (target - current) * 0.15;\n[spring, spring];\n",
+    "language": "javascript",
+    "normalized_hash": "a708345b57ce8da7",
+    "target_property": "Transform.Scale",
+    "parameters": [
+      {
+        "name": "Both",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Audio'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0052",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 530,
+    "end_line": 534,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 📍 3. POSITION & MOVEMENT > 3.12 Parallax Follow (Depth simulation)",
+    "raw_code": "const cam = thisComp.layer(\"Camera Tracker\");\nconst depthFactor = 0.5;\nvalue + (cam.position - [thisComp.width/2, thisComp.height/2]) * depthFactor;\n",
+    "language": "javascript",
+    "normalized_hash": "c746d9537874b7fb",
+    "target_property": "Transform.Position",
+    "parameters": [
+      {
+        "name": "depthFactor",
+        "type": "Number",
+        "default": 0.5,
+        "source": "inlined_variable"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Camera Tracker'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0060",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 618,
+    "end_line": 630,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 📍 3. POSITION & MOVEMENT > 3.20 Distance-Based Repel (Avoid Mouse/Null)",
+    "raw_code": "const mouse = thisComp.layer(\"Cursor\").position;\nconst maxDist = 200;\nconst force = 100;\nconst dist = length(mouse, value);\nif (dist < maxDist) {\n    const dir = normalize(value - mouse);\n    const repel = ease(dist, 0, maxDist, force, 0);\n    value + (dir * repel);\n} else {\n    value;\n}\n",
+    "language": "javascript",
+    "normalized_hash": "81b2d98f13aa4275",
+    "target_property": "Transform.Position",
+    "parameters": [
+      {
+        "name": "maxDist",
+        "type": "Number",
+        "default": 200,
+        "source": "inlined_variable"
+      },
+      {
+        "name": "force",
+        "type": "Number",
+        "default": 100,
+        "source": "inlined_variable"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Cursor'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0072",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 739,
+    "end_line": 744,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔄 4. ROTATION & SWINGS > 4.12 LookAt Target (Turret logic)",
+    "raw_code": "const target = thisComp.layer(\"Target\").position;\nconst p = position;\nconst delta = target - p;\nradiansToDegrees(Math.atan2(delta[1], delta[0]));\n",
+    "language": "javascript",
+    "normalized_hash": "5c6a7806439be115",
+    "target_property": "Transform.Rotation",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Target'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0074",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 757,
+    "end_line": 761,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔄 4. ROTATION & SWINGS > 4.14 Gear Ratio (Linked Rotation)",
+    "raw_code": "const mainGear = thisComp.layer(\"Main Gear\").transform.rotation;\nconst ratio = 2.5;\nmainGear * -ratio;\n",
+    "language": "javascript",
+    "normalized_hash": "8a9d077dc439f2d4",
+    "target_property": "Transform.Rotation",
+    "parameters": [
+      {
+        "name": "ratio",
+        "type": "Number",
+        "default": 2.5,
+        "source": "inlined_variable"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Main Gear'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0076",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 774,
+    "end_line": 778,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔄 4. ROTATION & SWINGS > 4.16 Wheel Roll Equation (Accurate rolling)",
+    "raw_code": "const radius = thisComp.layer(\"Wheel\").sourceRectAtTime().width / 2;\nconst dist = position[0];\n(dist / (2 * Math.PI * radius)) * 360;\n",
+    "language": "javascript",
+    "normalized_hash": "161f9c0988e6d41f",
+    "target_property": "Transform.Rotation",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Wheel'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0089",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 903,
+    "end_line": 908,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 👻 5. OPACITY & VISIBILITY > 5.9 Camera Proximity Fade (Z-Depth)",
+    "raw_code": "const cam = thisComp.layer(\"Camera 1\").position;\nconst me = toWorld(anchorPoint);\nconst dist = length(cam, me);\nease(dist, 500, 1500, 100, 0);\n",
+    "language": "javascript",
+    "normalized_hash": "842401d4a0bc8b0a",
+    "target_property": "Transform.Opacity",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Camera 1'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0090",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 914,
+    "end_line": 918,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 👻 5. OPACITY & VISIBILITY > 5.10 Object Proximity Fade (Reveal)",
+    "raw_code": "const cursor = thisComp.layer(\"Cursor\").position;\nconst dist = length(cursor, position);\nease(dist, 0, 300, 100, 0);\n",
+    "language": "javascript",
+    "normalized_hash": "0bee0afa871a2c9a",
+    "target_property": "Transform.Opacity",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Cursor'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0093",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 941,
+    "end_line": 944,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 👻 5. OPACITY & VISIBILITY > 5.13 Checkbox Visibility Switch",
+    "raw_code": "const cb = thisComp.layer(\"CTRL\").effect(\"Checkbox Control\")(\"Checkbox\");\ncb == 1 ? 100 : 0;\n",
+    "language": "javascript",
+    "normalized_hash": "e64328a22334f485",
+    "target_property": "Transform.Opacity",
+    "parameters": [
+      {
+        "name": "Checkbox Control",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CTRL'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0100",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1008,
+    "end_line": 1011,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 👻 5. OPACITY & VISIBILITY > 5.20 Array Index Visibility (Carousel logic)",
+    "raw_code": "const activeIndex = Math.floor(thisComp.layer(\"CTRL\").effect(\"Slider Control\")(\"Slider\"));\nindex === activeIndex ? 100 : 0;\n",
+    "language": "javascript",
+    "normalized_hash": "148e04bce3ca8721",
+    "target_property": "Transform.Opacity",
+    "parameters": [
+      {
+        "name": "Slider Control",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CTRL'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0113",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1154,
+    "end_line": 1158,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🎨 6. COLOR & STYLING > 6.13 Audio Trim Paths (Offset Loop)",
+    "raw_code": "const amp = thisComp.layer(\"Audio Amplitude\").effect(\"Both Channels\")(\"Slider\");\nconst speed = ease(amp, 0, 20, 100, 1000);\ntime * speed;\n",
+    "language": "javascript",
+    "normalized_hash": "be3bcc1896f2b701",
+    "target_property": "Color",
+    "parameters": [
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "SPEED_INTEGRATION_FALLACY",
+        "message": "Multiplying instantaneous variable frequency/speed by elapsed time does not integrate velocity; causes phase jumps."
+      }
+    ],
+    "classification": "INVALID_OR_UNSAFE"
+  },
+  {
+    "id": "bible_v1_b0116",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1182,
+    "end_line": 1186,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🎨 6. COLOR & STYLING > 6.16 Fractal Noise Evolution by Audio",
+    "raw_code": "const amp = thisComp.layer(\"Audio Amplitude\").effect(\"Both Channels\")(\"Slider\");\nconst speed = ease(amp, 0, 20, 50, 500);\ntime * speed;\n",
+    "language": "javascript",
+    "normalized_hash": "a7bb6416e0e00148",
+    "target_property": "Color",
+    "parameters": [
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "SPEED_INTEGRATION_FALLACY",
+        "message": "Multiplying instantaneous variable frequency/speed by elapsed time does not integrate velocity; causes phase jumps."
+      }
+    ],
+    "classification": "INVALID_OR_UNSAFE"
+  },
+  {
+    "id": "bible_v1_b0120",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1224,
+    "end_line": 1229,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🎨 6. COLOR & STYLING > 6.20 Depth-Based Color Darkening (Fog)",
+    "raw_code": "const cam = thisComp.layer(\"Camera\");\nconst dist = length(cam.position, position);\nconst darkFactor = ease(dist, 500, 2000, 1, 0.1);\nvalue * darkFactor;\n",
+    "language": "javascript",
+    "normalized_hash": "d8b675cc07e184cb",
+    "target_property": "Color",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Camera'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0133",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1331,
+    "end_line": 1334,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔁 7. LOOPS & TIME > 7.13 Master Time Slider (Scrub animation)",
+    "raw_code": "const t = thisComp.layer(\"CTRL\").effect(\"Time Slider\")(\"Slider\");\nvalueAtTime(t);\n",
+    "language": "javascript",
+    "normalized_hash": "609ec2772dff777c",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Time Slider",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CTRL'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0159",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1580,
+    "end_line": 1584,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > ⚡ 8. WIGGLE & NOISE > 8.19 Audio Ducking Wiggle (Stops wiggling when loud)",
+    "raw_code": "const amp = thisComp.layer(\"Audio\").effect(\"Both\")(\"Slider\");\nconst wAmt = ease(amp, 10, 30, 50, 0);\nwiggle(3, wAmt);\n",
+    "language": "javascript",
+    "normalized_hash": "c55012ba7d7e7864",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Both",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Audio'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0169",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1716,
+    "end_line": 1722,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🌊 9. PHYSICS & INERTIA > 9.9 Soft Inertia Scale (Target tracking)",
+    "raw_code": "const target = thisComp.layer(\"Target\").scale[0];\nconst current = value[0];\nconst speed = 0.2;\nconst s = current + (target - current) * speed;\n[s, s];\n",
+    "language": "javascript",
+    "normalized_hash": "1bfc74c0d730eadb",
+    "target_property": "Transform.Scale",
+    "parameters": [
+      {
+        "name": "speed",
+        "type": "Number",
+        "default": 0.2,
+        "source": "inlined_variable"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Target'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0175",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1788,
+    "end_line": 1792,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🌊 9. PHYSICS & INERTIA > 9.15 Follow Null Rotation",
+    "raw_code": "const leader = thisComp.layer(\"Null\").rotation;\nconst delay = 0.1;\nleader.valueAtTime(time - delay);\n",
+    "language": "javascript",
+    "normalized_hash": "c8ee3fa1fdd3e72e",
+    "target_property": "Transform.Rotation",
+    "parameters": [
+      {
+        "name": "delay",
+        "type": "Number",
+        "default": 0.1,
+        "source": "inlined_variable"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Null'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0177",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1808,
+    "end_line": 1819,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🌊 9. PHYSICS & INERTIA > 9.17 Repel Force (Magnetism)",
+    "raw_code": "const cursor = thisComp.layer(\"Cursor\").position;\nconst dist = length(cursor, value);\nconst force = 10000;\nconst maxDist = 200;\nif (dist < maxDist && dist > 0) {\n    const dir = normalize(value - cursor);\n    value + dir * (force / dist);\n} else {\n    value;\n}\n",
+    "language": "javascript",
+    "normalized_hash": "6424c9b1a67cf054",
+    "target_property": "Transform.Position",
+    "parameters": [
+      {
+        "name": "force",
+        "type": "Number",
+        "default": 10000,
+        "source": "inlined_variable"
+      },
+      {
+        "name": "maxDist",
+        "type": "Number",
+        "default": 200,
+        "source": "inlined_variable"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Cursor'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0178",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1825,
+    "end_line": 1834,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🌊 9. PHYSICS & INERTIA > 9.18 Attract Force (Gravity Well)",
+    "raw_code": "const hole = thisComp.layer(\"BlackHole\").position;\nconst dist = length(hole, value);\nconst strength = 0.1;\nif (dist < 500) {\n    value + (hole - value) * strength;\n} else {\n    value;\n}\n",
+    "language": "javascript",
+    "normalized_hash": "1747b9834744a503",
+    "target_property": "Transform.Position",
+    "parameters": [
+      {
+        "name": "strength",
+        "type": "Number",
+        "default": 0.1,
+        "source": "inlined_variable"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BlackHole'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v1_b0181",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1867,
+    "end_line": 1871,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.1 Slider Control Array Selector",
+    "raw_code": "const vals = [10, 50, 120, 300];\nconst s = Math.floor(thisComp.layer(\"CTRL\").effect(\"Slider\")(\"Slider\"));\nvals[clamp(s, 0, vals.length - 1)];\n",
+    "language": "javascript",
+    "normalized_hash": "eceded2008d15f35",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Slider",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CTRL'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0182",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1876,
+    "end_line": 1879,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.2 toComp() — True World Position",
+    "raw_code": "const target = thisComp.layer(\"Null 1\");\ntarget.toComp(target.anchorPoint);\n",
+    "language": "javascript",
+    "normalized_hash": "ed452ee1c33eebab",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Null 1'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0183",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1884,
+    "end_line": 1887,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.3 fromComp() — Convert World to Local",
+    "raw_code": "const worldPoint = thisComp.layer(\"Target\").position;\nfromComp(worldPoint);\n",
+    "language": "javascript",
+    "normalized_hash": "2ebf0bfbf0a91bfd",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Target'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0184",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1892,
+    "end_line": 1896,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.4 Auto-Orient (LookAt Target 2D)",
+    "raw_code": "const target = thisComp.layer(\"Target\").position;\nconst delta = target - position;\nradiansToDegrees(Math.atan2(delta[1], delta[0]));\n",
+    "language": "javascript",
+    "normalized_hash": "1c7001d1d83fb83a",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Target'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0187",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1920,
+    "end_line": 1923,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.7 Checkbox Toggle Switch",
+    "raw_code": "const cb = thisComp.layer(\"CTRL\").effect(\"Checkbox Control\")(\"Checkbox\");\ncb == 1 ? 100 : 0;\n",
+    "language": "javascript",
+    "normalized_hash": "e64328a22334f485",
+    "target_property": "Generic.Property",
+    "parameters": [
+      {
+        "name": "Checkbox Control",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CTRL'."
+      }
+    ],
+    "classification": "DUPLICATE_VARIANT",
+    "canonical_block_id": "bible_v1_b0093"
+  },
+  {
+    "id": "bible_v1_b0188",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1929,
+    "end_line": 1934,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.8 Dropdown Menu Control (AE 2020+)",
+    "raw_code": "const menu = thisComp.layer(\"CTRL\").effect(\"Dropdown Menu Control\")(\"Menu\");\nif (menu == 1) [100, 100];\nelse if (menu == 2) [200, 200];\nelse [50, 50];\n",
+    "language": "javascript",
+    "normalized_hash": "dbd45ea035144c23",
+    "target_property": "Generic.Property",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CTRL'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0190",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1948,
+    "end_line": 1951,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.10 Text Source Link",
+    "raw_code": "const s = thisComp.layer(\"CTRL\").effect(\"Slider\")(\"Slider\");\nMath.round(s) + \"%\";\n",
+    "language": "javascript",
+    "normalized_hash": "c1d046e775999939",
+    "target_property": "Text.SourceText",
+    "parameters": [
+      {
+        "name": "Slider",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CTRL'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0192",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1965,
+    "end_line": 1970,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.12 Dynamic Background Box (Auto-sizing)",
+    "raw_code": "const t = thisComp.layer(\"Text\");\nconst pad = 50;\nconst box = t.sourceRectAtTime();\n[box.width + pad, box.height + pad];\n",
+    "language": "javascript",
+    "normalized_hash": "b04555295d3fecfe",
+    "target_property": "Generic.Property",
+    "parameters": [
+      {
+        "name": "pad",
+        "type": "Number",
+        "default": 50,
+        "source": "inlined_variable"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Text'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0193",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1975,
+    "end_line": 1977,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.13 Master Color Controller",
+    "raw_code": "thisComp.layer(\"CTRL\").effect(\"Theme Color\")(\"Color\");\n",
+    "language": "javascript",
+    "normalized_hash": "f40f5251f343eb12",
+    "target_property": "Color",
+    "parameters": [
+      {
+        "name": "Theme Color",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CTRL'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0194",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1983,
+    "end_line": 1988,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.14 Opacity by Distance (Measuring tape)",
+    "raw_code": "const p1 = thisComp.layer(\"Point A\").position;\nconst p2 = thisComp.layer(\"Point B\").position;\nconst dist = length(p1, p2);\nease(dist, 100, 500, 100, 0);\n",
+    "language": "javascript",
+    "normalized_hash": "922b38b1ec2a53cf",
+    "target_property": "Transform.Opacity",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Point A'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Point B'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0195",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 1994,
+    "end_line": 1996,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.15 Line Draw Between Two Nulls (Beam effect)",
+    "raw_code": "thisComp.layer(\"Null A\").toComp([0,0]);\n",
+    "language": "javascript",
+    "normalized_hash": "02b69fb85f22db81",
+    "target_property": "Generic.Property",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Null A'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0197",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 2011,
+    "end_line": 2015,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.17 Parent to Point on Shape (Path Data)",
+    "raw_code": "const path = thisComp.layer(\"Shape\").content(\"Path 1\").path;\nconst pointIndex = 0;\npath.points()[pointIndex];\n",
+    "language": "javascript",
+    "normalized_hash": "2afa3e54829b1a46",
+    "target_property": "Generic.Property",
+    "parameters": [
+      {
+        "name": "pointIndex",
+        "type": "Number",
+        "default": 0,
+        "source": "inlined_variable"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Shape'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0198",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 2021,
+    "end_line": 2025,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.18 Trace Path Progress",
+    "raw_code": "const path = thisComp.layer(\"Shape\").content(\"Path 1\").path;\nconst progress = (time % 2) / 2;\npath.pointOnPath(progress);\n",
+    "language": "javascript",
+    "normalized_hash": "9bf5e7581751b7f2",
+    "target_property": "Generic.Property",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Shape'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0199",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 2030,
+    "end_line": 2035,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.19 Angle on Path",
+    "raw_code": "const path = thisComp.layer(\"Shape\").content(\"Path 1\").path;\nconst progress = (time % 2) / 2;\nconst vec = path.tangentOnPath(progress);\nradiansToDegrees(Math.atan2(vec[1], vec[0]));\n",
+    "language": "javascript",
+    "normalized_hash": "27d4d3f980ae0b00",
+    "target_property": "Generic.Property",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Shape'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v1_b0200",
+    "source_id": "bible_v1",
+    "source_title": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED)",
+    "start_line": 2040,
+    "end_line": 2044,
+    "heading": "📘 THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE (V3 — ANNOTATED) > 🔗 10. LAYER SPACE & RIGGING > 10.20 Master Audio Gate (Rig Toggle)",
+    "raw_code": "const amp = thisComp.layer(\"Audio\").effect(\"Both\")(\"Slider\");\nconst switchOn = thisComp.layer(\"CTRL\").effect(\"Enable Beat Sync\")(\"Checkbox\");\nswitchOn == 1 ? linear(amp, 0, 20, 100, 150) : 100;\n",
+    "language": "javascript",
+    "normalized_hash": "478f7eb6dee1837f",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Enable Beat Sync",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Both",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Audio'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CTRL'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v2_b0002",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 75,
+    "end_line": 81,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🎯 Универсальная формула",
+    "raw_code": "amp = audioLayer.effect(\"Both Channels\")(\"Slider\");\n\nfreq = ease(amp,0,20,1,10);\n\nMath.sin(time*freq)*100;\n",
+    "language": "javascript",
+    "normalized_hash": "77513fad0414c907",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "SPEED_INTEGRATION_FALLACY",
+        "message": "Multiplying instantaneous variable frequency/speed by elapsed time does not integrate velocity; causes phase jumps."
+      }
+    ],
+    "classification": "INVALID_OR_UNSAFE"
+  },
+  {
+    "id": "bible_v2_b0017",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 248,
+    "end_line": 252,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔗 Ease → Sin",
+    "raw_code": "freq = ease(amp,0,20,1,10);\n\nMath.sin(time*freq)*100;\n",
+    "language": "javascript",
+    "normalized_hash": "348e14e30d458099",
+    "target_property": "Generic.Property",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "SPEED_INTEGRATION_FALLACY",
+        "message": "Multiplying instantaneous variable frequency/speed by elapsed time does not integrate velocity; causes phase jumps."
+      }
+    ],
+    "classification": "INVALID_OR_UNSAFE"
+  },
+  {
+    "id": "bible_v2_b0048",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 631,
+    "end_line": 637,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔄 ROTATION — ВРАЩЕНИЕ > Rotation — пружинящий отклик (bounce after beat)",
+    "raw_code": "audioLayer = thisComp.layer(\"Audio Amplitude\");\namp = audioLayer.effect(\"Both Channels\")(\"Slider\");\nfreq = ease(amp, 0, 20, 1, 6);    // частота качания\ndecA = ease(amp, 0, 20, 0, 25);   // амплитуда качания\nMath.sin(time * freq * Math.PI * 2) * decA;\n",
+    "language": "javascript",
+    "normalized_hash": "21eb73ec1ecd2cfd",
+    "target_property": "Transform.Rotation",
+    "parameters": [
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "SPEED_INTEGRATION_FALLACY",
+        "message": "Multiplying instantaneous variable frequency/speed by elapsed time does not integrate velocity; causes phase jumps."
+      }
+    ],
+    "classification": "INVALID_OR_UNSAFE"
+  },
+  {
+    "id": "bible_v2_b0091",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 1200,
+    "end_line": 1205,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 📦 UTILS — ПОЛЕЗНЫЕ ФУНКЦИИ > Ссылка на другой слой (не аудио)",
+    "raw_code": "// Берёт Scale из другого слоя\nref = thisComp.layer(\"Master Control\");\ns = ref.transform.scale[0];\ns * 0.5;  // Half of master's scale\n",
+    "language": "javascript",
+    "normalized_hash": "e00f0e8f7d6a6024",
+    "target_property": "Transform.Scale",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Master Control'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0097",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 1259,
+    "end_line": 1284,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🚀 FULL RIG — ГОТОВЫЕ РИГИ > RIG 1: Полный бит-риг через Null (PRODUCTION READY)",
+    "raw_code": "// [Null \"BEAT_MASTER\"] -> Slider Control \"Beat Raw\" -> Slider:\naudioLayer = thisComp.layer(\"Audio Amplitude\");\naudioLayer.effect(\"Both Channels\")(\"Slider\");\n\n// [Null \"BEAT_MASTER\"] -> Slider Control \"Beat Smooth\" -> Slider:\nraw = thisLayer.effect(\"Beat Raw\")(\"Slider\");\nease(raw, 0, 20, 0, 100);\n\n// Теперь на любом дочернем слое -> Scale:\nnull_ = thisComp.layer(\"BEAT_MASTER\");\ns = null_.effect(\"Beat Smooth\")(\"Slider\");\nmapped = ease(s, 0, 100, 100, 160);\n[mapped, mapped];\n\n// На Rotation:\nnull_ = thisComp.layer(\"BEAT_MASTER\");\ns = null_.effect(\"Beat Smooth\")(\"Slider\");\nease(s, 0, 100, 0, 20);\n\n// На Position Y:\nnull_ = thisComp.layer(\"BEAT_MASTER\");\ns = null_.effect(\"Beat Smooth\")(\"Slider\");\noy = ease(s, 0, 100, 0, -50);\n[value[0], value[1] + oy];\n",
+    "language": "javascript",
+    "normalized_hash": "2e02e1f2da4b7857",
+    "target_property": "Transform.Scale",
+    "parameters": [
+      {
+        "name": "Beat Smooth",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Beat Raw",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v2_b0149",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 2048,
+    "end_line": 2057,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🎛️ EXPRESSION CONTROLS — УПРАВЛЕНИЕ ЧЕРЕЗ UI > Использование контролов в expressions",
+    "raw_code": "ctrl = thisComp.layer(\"CONTROLS\");\n\nfreq  = ctrl.effect(\"Freq\")(\"Slider\");\namp   = ctrl.effect(\"Amplitude\")(\"Slider\");\nphase = ctrl.effect(\"Phase\")(\"Slider\") * Math.PI / 180;  // в радианы\n\noffset = Math.sin(time * freq * Math.PI * 2 + phase) * amp;\n[value[0], value[1] + offset];\n",
+    "language": "javascript",
+    "normalized_hash": "6213944b1cfc12b0",
+    "target_property": "Transform.Rotation",
+    "parameters": [
+      {
+        "name": "Freq",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Phase",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Amplitude",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CONTROLS'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0150",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 2061,
+    "end_line": 2073,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🎛️ EXPRESSION CONTROLS — УПРАВЛЕНИЕ ЧЕРЕЗ UI > Checkbox — вкл/выкл всего",
+    "raw_code": "ctrl    = thisComp.layer(\"CONTROLS\");\nenabled = ctrl.effect(\"Enable\")(\"Checkbox\");\n\nif (enabled) {\n  audioLayer = thisComp.layer(\"Audio Amplitude\");\n  amp_ = audioLayer.effect(\"Both Channels\")(\"Slider\");\n  s = ease(amp_, 0, 20, 100, 160);\n  [s, s];\n} else {\n  value;  // вернуть оригинал без изменений\n}\n",
+    "language": "javascript",
+    "normalized_hash": "b30ecefea13e9b70",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Enable",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CONTROLS'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0151",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 2077,
+    "end_line": 2087,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🎛️ EXPRESSION CONTROLS — УПРАВЛЕНИЕ ЧЕРЕЗ UI > Point Control как цель для движения",
+    "raw_code": "ctrl   = thisComp.layer(\"CONTROLS\");\ntarget = ctrl.effect(\"Target XY\")(\"Point\");\n// target = [x, y] в координатах компа\n\n// Линейно едем к точке за 3 секунды:\nt = clamp(time / 3, 0, 1);\nst = t * t * (3 - 2 * t);  // smoothstep\n[value[0] + (target[0] - value[0]) * st,\n value[1] + (target[1] - value[1]) * st];\n",
+    "language": "javascript",
+    "normalized_hash": "7029f077e92c60c3",
+    "target_property": "Slider",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CONTROLS'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0152",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 2091,
+    "end_line": 2102,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🎛️ EXPRESSION CONTROLS — УПРАВЛЕНИЕ ЧЕРЕЗ UI > Angle Control для направления wiggle",
+    "raw_code": "ctrl = thisComp.layer(\"CONTROLS\");\ndir  = ctrl.effect(\"Direction\")(\"Angle\") * Math.PI / 180;  // градусы -> радианы\namp_ = 60;\nfreq = 1.5;\ndist = Math.sin(time * freq * Math.PI * 2) * amp_;\n\n// Движение вдоль угла dir:\n[value[0] + Math.cos(dir) * dist,\n value[1] + Math.sin(dir) * dist];\n// Перетаскиваешь \"Direction\" -> меняешь ось качания\n",
+    "language": "javascript",
+    "normalized_hash": "46cab8fdd01fc64e",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CONTROLS'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0153",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 2106,
+    "end_line": 2117,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🎛️ EXPRESSION CONTROLS — УПРАВЛЕНИЕ ЧЕРЕЗ UI > Slider как множитель \"глобальной энергии\"",
+    "raw_code": "// Один слайдер управляет интенсивностью ВСЕГО рига\nctrl   = thisComp.layer(\"CONTROLS\");\nenergy = ctrl.effect(\"Energy\")(\"Slider\");  // 0..100\n\naudioLayer = thisComp.layer(\"Audio Amplitude\");\namp_ = audioLayer.effect(\"Both Channels\")(\"Slider\");\n// Масштабируем ответ рига на energy:\ns = ease(amp_, 0, 20, 100, 100 + energy);\n[s, s];\n// energy=0 -> нет реакции, energy=100 -> полная\n",
+    "language": "javascript",
+    "normalized_hash": "5413b69b635ce358",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Energy",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CONTROLS'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0154",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 2127,
+    "end_line": 2135,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔗 LINKING — СВЯЗЬ МЕЖДУ СЛОЯМИ > Зеркальная позиция (симметрия)",
+    "raw_code": "// Слой B зеркалит позицию слоя A относительно центра\nleader = thisComp.layer(\"Element_A\");\ncx = thisComp.width  / 2;\ncy = thisComp.height / 2;\nposA = leader.transform.position;\n[2 * cx - posA[0], posA[1]];  // зеркало по X\n// [posA[0], 2 * cy - posA[1]];  // зеркало по Y\n",
+    "language": "javascript",
+    "normalized_hash": "677cf9ec1af9706f",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Element_A'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0155",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 2139,
+    "end_line": 2144,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔗 LINKING — СВЯЗЬ МЕЖДУ СЛОЯМИ > Инверсия rotation",
+    "raw_code": "// Слой B вращается в обратную сторону от слоя A\nleader = thisComp.layer(\"Gear_A\");\n-leader.transform.rotation;\n// Шестерня B вращается против шестерни A\n",
+    "language": "javascript",
+    "normalized_hash": "63eb0fb6908179a0",
+    "target_property": "Transform.Rotation",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Gear_A'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0157",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 2157,
+    "end_line": 2165,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔗 LINKING — СВЯЗЬ МЕЖДУ СЛОЯМИ > Opacity одного зависит от position другого",
+    "raw_code": "// Чем ближе слой к центру — тем более прозрачен\nref = thisComp.layer(\"MovingDot\");\npos = ref.transform.position;\ncx  = thisComp.width  / 2;\ncy  = thisComp.height / 2;\ndist = length(pos, [cx, cy]);  // length() — встроенная в AE\nease(dist, 0, 400, 0, 100);   // далеко = видно, близко = прозрачно\n",
+    "language": "javascript",
+    "normalized_hash": "e2d340259f6030ca",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'MovingDot'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0159",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 2183,
+    "end_line": 2190,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔗 LINKING — СВЯЗЬ МЕЖДУ СЛОЯМИ > Родитель-ребёнок через expression (без Parent пика)",
+    "raw_code": "// Ребёнок следует за родителем, но с дополнительным сдвигом\nparent_ = thisComp.layer(\"Parent_Null\");\nparentPos = parent_.transform.position;\nlocalOffset = [50, -30];  // смещение от родителя\n[parentPos[0] + localOffset[0],\n parentPos[1] + localOffset[1]];\n",
+    "language": "javascript",
+    "normalized_hash": "7c8d66f42e133bb5",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Parent_Null'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0258",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 3489,
+    "end_line": 3501,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🏗️ MASTER RIG v2 — PRODUCTION FULL RIG > Использование на слоях — Scale через Beat Smooth",
+    "raw_code": "M = thisComp.layer(\"BEAT_MASTER\");\nenergy  = M.effect(\"Energy\")(\"Slider\") / 100;\nenabled = M.effect(\"Enable Beat\")(\"Checkbox\");\nbeat    = M.effect(\"Beat Smooth\")(\"Slider\");\n\nif (enabled) {\n  s = ease(beat, 0, 100, 100, 100 + 60 * energy);\n} else {\n  s = 100;\n}\n[s, s];\n",
+    "language": "javascript",
+    "normalized_hash": "d2e7679e76be5652",
+    "target_property": "Transform.Scale",
+    "parameters": [
+      {
+        "name": "Beat Smooth",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Energy",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Enable Beat",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v2_b0259",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 3505,
+    "end_line": 3530,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🏗️ MASTER RIG v2 — PRODUCTION FULL RIG > Использование — Position с процедурным дрейфом",
+    "raw_code": "M = thisComp.layer(\"BEAT_MASTER\");\nP = thisComp.layer(\"PROC_MASTER\");\n\n// Бит-компонент:\nbeatEnabled = M.effect(\"Enable Beat\")(\"Checkbox\");\nbeat        = M.effect(\"Beat Sharp\")(\"Slider\");\nenergy      = M.effect(\"Energy\")(\"Slider\") / 100;\nbeatOffsetY = beatEnabled ? ease(beat, 0, 100, 0, -50 * energy) : 0;\n\n// Процедурный компонент:\nprocEnabled = P.effect(\"Enable Proc\")(\"Checkbox\");\ndriftSpeed  = P.effect(\"Drift Speed\")(\"Slider\");\ndriftAmp    = P.effect(\"Drift Amp\")(\"Slider\");\n\n// Случайная фаза для этого слоя:\nseedRandom(index * 31, true);\nphaseX = random(0, Math.PI * 2);\nphaseY = random(0, Math.PI * 2);\n\nprocOffsetX = procEnabled ? Math.sin(time * driftSpeed * Math.PI * 2 + phaseX) * driftAmp : 0;\nprocOffsetY = procEnabled ? Math.sin(time * driftSpeed * Math.PI * 2 * 0.7 + phaseY) * driftAmp * 0.6 : 0;\n\n// Итог:\n[value[0] + procOffsetX, value[1] + procOffsetY + beatOffsetY];\n",
+    "language": "javascript",
+    "normalized_hash": "0b1d57504755f5d9",
+    "target_property": "Transform.Position",
+    "parameters": [
+      {
+        "name": "Enable Beat",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Energy",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Drift Speed",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Beat Sharp",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Drift Amp",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Enable Proc",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'PROC_MASTER'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v2_b0260",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 3534,
+    "end_line": 3552,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🏗️ MASTER RIG v2 — PRODUCTION FULL RIG > Использование — Rotation комбо",
+    "raw_code": "M = thisComp.layer(\"BEAT_MASTER\");\nP = thisComp.layer(\"PROC_MASTER\");\n\nbeat       = M.effect(\"Beat Smooth\")(\"Slider\");\nenergy     = M.effect(\"Energy\")(\"Slider\") / 100;\npulseFreq  = P.effect(\"Pulse Freq\")(\"Slider\");\npulseAmp   = P.effect(\"Pulse Amp\")(\"Slider\");\n\nseedRandom(index * 17, true);\nphase = random(0, Math.PI * 2);\n\n// Процедурное качание:\nprocRot = Math.sin(time * pulseFreq * Math.PI * 2 + phase) * pulseAmp;\n// Бит-поворот:\nbeatRot = ease(beat, 0, 100, 0, 15 * energy);\n\nprocRot + beatRot;\n",
+    "language": "javascript",
+    "normalized_hash": "68e25565a6647a0a",
+    "target_property": "Transform.Rotation",
+    "parameters": [
+      {
+        "name": "Beat Smooth",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Energy",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Pulse Freq",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Pulse Amp",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'PROC_MASTER'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v2_b0261",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 3556,
+    "end_line": 3565,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🏗️ MASTER RIG v2 — PRODUCTION FULL RIG > Использование — Opacity с порогом и энергией",
+    "raw_code": "M = thisComp.layer(\"BEAT_MASTER\");\nbeat   = M.effect(\"Beat Smooth\")(\"Slider\");\nenergy = M.effect(\"Energy\")(\"Slider\") / 100;\n\n// Базовая прозрачность + вспышка под бит:\nbaseOpacity = 60;\nbeatFlash   = ease(beat, 0, 100, 0, 40 * energy);\nclamp(baseOpacity + beatFlash, 0, 100);\n",
+    "language": "javascript",
+    "normalized_hash": "54646a453c0d7a21",
+    "target_property": "Transform.Opacity",
+    "parameters": [
+      {
+        "name": "Beat Smooth",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Energy",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v2_b0262",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 3569,
+    "end_line": 3580,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🏗️ MASTER RIG v2 — PRODUCTION FULL RIG > BPM sync через BEAT_MASTER",
+    "raw_code": "M       = thisComp.layer(\"BEAT_MASTER\");\nbpm_    = M.effect(\"BPM\")(\"Slider\");     // значение BPM установлено вручную\nenergy  = M.effect(\"Energy\")(\"Slider\") / 100;\n\nsecPerBeat = 60 / bpm_;\nbeatFrac   = (time / secPerBeat) % 1;\n// Пульс: 1 в начале бита, 0 к концу:\npulse = Math.pow(1 - beatFrac, 2);  // квадратичное затухание\ns = 100 + pulse * 40 * energy;\n[s, s];\n",
+    "language": "javascript",
+    "normalized_hash": "abf8491e5d660427",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Energy",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "BPM",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      }
+    ],
+    "classification": "MULTI_PROPERTY_RIG"
+  },
+  {
+    "id": "bible_v2_b0266",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 3628,
+    "end_line": 3641,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🎵 FREQUENCY BANDS — ЧАСТОТНЫЕ ДИАПАЗОНЫ > Риг с тремя частотными слоями",
+    "raw_code": "// Допустим у тебя три слоя с амплитудами:\n// \"Amp_Bass\"  — только низкие (бочка, бас)\n// \"Amp_Mid\"   — средние\n// \"Amp_High\"  — высокие (хеты)\n\nbassAmp = thisComp.layer(\"Amp_Bass\").effect(\"Both Channels\")(\"Slider\");\nmidAmp  = thisComp.layer(\"Amp_Mid\").effect(\"Both Channels\")(\"Slider\");\nhighAmp = thisComp.layer(\"Amp_High\").effect(\"Both Channels\")(\"Slider\");\n\n// Scale реагирует только на бас:\ns = ease(bassAmp, 0, 20, 100, 160);\n[s, s];\n",
+    "language": "javascript",
+    "normalized_hash": "9b3a26302e507b7f",
+    "target_property": "Transform.Scale",
+    "parameters": [
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Amp_Bass'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Amp_Mid'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Amp_High'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0267",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 3645,
+    "end_line": 3649,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🎵 FREQUENCY BANDS — ЧАСТОТНЫЕ ДИАПАЗОНЫ > Position X — хеты двигают по горизонтали",
+    "raw_code": "highAmp = thisComp.layer(\"Amp_High\").effect(\"Both Channels\")(\"Slider\");\nox = ease(highAmp, 0, 15, 0, 40);\n[value[0] + ox, value[1]];\n",
+    "language": "javascript",
+    "normalized_hash": "5e149f51f8fa9b11",
+    "target_property": "Transform.Position",
+    "parameters": [
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Amp_High'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0268",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 3653,
+    "end_line": 3656,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🎵 FREQUENCY BANDS — ЧАСТОТНЫЕ ДИАПАЗОНЫ > Rotation — мид-частоты крутят",
+    "raw_code": "midAmp = thisComp.layer(\"Amp_Mid\").effect(\"Both Channels\")(\"Slider\");\nease(midAmp, 0, 18, 0, 25);\n",
+    "language": "javascript",
+    "normalized_hash": "52b44e8cb0dc6c7a",
+    "target_property": "Transform.Rotation",
+    "parameters": [
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Amp_Mid'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0269",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 3660,
+    "end_line": 3674,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🎵 FREQUENCY BANDS — ЧАСТОТНЫЕ ДИАПАЗОНЫ > Три объекта на три частоты (независимые)",
+    "raw_code": "// Объект 1 (Scale) — только бас:\nbassAmp = thisComp.layer(\"Amp_Bass\").effect(\"Both Channels\")(\"Slider\");\ns = ease(bassAmp, 0, 20, 100, 180);\n[s, s];\n\n// Объект 2 (Opacity) — только хеты:\nhighAmp = thisComp.layer(\"Amp_High\").effect(\"Both Channels\")(\"Slider\");\nease(highAmp, 0, 15, 40, 100);\n\n// Объект 3 (Position Y) — мидранж:\nmidAmp = thisComp.layer(\"Amp_Mid\").effect(\"Both Channels\")(\"Slider\");\noy = ease(midAmp, 0, 18, 0, -60);\n[value[0], value[1] + oy];\n",
+    "language": "javascript",
+    "normalized_hash": "4b21b7bfcdd6b059",
+    "target_property": "Transform.Scale",
+    "parameters": [
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Amp_Bass'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Amp_High'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Amp_Mid'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0321",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4512,
+    "end_line": 4521,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🪆 PARENTING & NULL TRICKS — НУЛЛЫ И ПЭРЕНТИНГ > Конвертировать позицию между слоями",
+    "raw_code": "// Позиция слоя A в координатах слоя B:\nlayerA = thisComp.layer(\"Object_A\");\nlayerB = thisComp.layer(\"Object_B\");\n\n// Точка в компе из слоя A:\ncompPt = layerA.toComp(layerA.transform.anchorPoint);\n// Эта точка в локальных координатах слоя B:\nlayerB.fromComp(compPt);\n",
+    "language": "javascript",
+    "normalized_hash": "679334db518bd913",
+    "target_property": "Generic.Property",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Object_A'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Object_B'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0322",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4525,
+    "end_line": 4539,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🪆 PARENTING & NULL TRICKS — НУЛЛЫ И ПЭРЕНТИНГ > Null как \"виртуальная камера\" (controller)",
+    "raw_code": "// Null \"CTRL\" управляет позицией группы слоёв\n// Слой-ребёнок: Position смещается ОТНОСИТЕЛЬНО нулла + своей орбиты:\nctrl = thisComp.layer(\"CTRL\");\nctrlPos = ctrl.transform.position;\n\nseedRandom(index * 61, true);\norbitR = random(50, 150);\norbitSpeed = random(0.2, 0.8);\norbitPhase = random(0, Math.PI * 2);\n\nox = Math.cos(time * orbitSpeed * Math.PI * 2 + orbitPhase) * orbitR;\noy = Math.sin(time * orbitSpeed * Math.PI * 2 + orbitPhase) * orbitR;\n[ctrlPos[0] + ox, ctrlPos[1] + oy];\n",
+    "language": "javascript",
+    "normalized_hash": "616b9a6adc944f08",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'CTRL'."
+      }
+    ],
+    "classification": "REQUIRES_PARAMETERIZATION"
+  },
+  {
+    "id": "bible_v2_b0323",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4543,
+    "end_line": 4554,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🪆 PARENTING & NULL TRICKS — НУЛЛЫ И ПЭРЕНТИНГ > Null — multiple inheritance (два родителя одновременно)",
+    "raw_code": "// AE позволяет только одного Parent.\n// Через expression — можно усреднить два нулла:\nnullA = thisComp.layer(\"NULL_A\");\nnullB = thisComp.layer(\"NULL_B\");\nweight = 0.5;  // 0 = только A, 1 = только B\nposA = nullA.transform.position;\nposB = nullB.transform.position;\n[posA[0] + (posB[0] - posA[0]) * weight,\n posA[1] + (posB[1] - posA[1]) * weight];\n// Слой \"между\" двумя нуллами. weight = 0.5 -> ровно посередине.\n",
+    "language": "javascript",
+    "normalized_hash": "92fd9535354c5c58",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'NULL_A'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'NULL_B'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0324",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4558,
+    "end_line": 4565,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🪆 PARENTING & NULL TRICKS — НУЛЛЫ И ПЭРЕНТИНГ > Null — привязка к вершине шейп-слоя",
+    "raw_code": "// Получить позицию первой точки пути в comp-координатах:\nshapeLayer = thisComp.layer(\"My Shape\");\n// Вершины пути через expression не читаются напрямую.\n// Workaround: используй Effect -> CC Composite или Motion Path\n// Реальный workaround: ставь Null через Snap to path в AE вручную,\n// или используй createPath() в ExtendScript (не expression)\n",
+    "language": "javascript",
+    "normalized_hash": "0aa07c08d6980d9c",
+    "target_property": "Generic.Property",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'My Shape'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0326",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4588,
+    "end_line": 4609,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🪆 PARENTING & NULL TRICKS — НУЛЛЫ И ПЭРЕНТИНГ > Dynamic parenting — слой переключает пэрента в разное время",
+    "raw_code": "// Нельзя менять Parent через expression напрямую.\n// Workaround через Position: вычисляй позицию как будто ты привязан к разным нуллам:\nnullA = thisComp.layer(\"NULL_A\");\nnullB = thisComp.layer(\"NULL_B\");\n\nswitchTime = 2.0;  // секунд когда переключаемся\nblendDur   = 0.3;  // длительность перехода\n\nif (time < switchTime) {\n  nullA.transform.position;\n} else if (time < switchTime + blendDur) {\n  t  = (time - switchTime) / blendDur;\n  st = t * t * (3 - 2 * t);\n  posA = nullA.transform.position;\n  posB = nullB.transform.position;\n  [posA[0] + (posB[0]-posA[0]) * st,\n   posA[1] + (posB[1]-posA[1]) * st];\n} else {\n  nullB.transform.position;\n}\n",
+    "language": "javascript",
+    "normalized_hash": "41ff65750aaaadee",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'NULL_A'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'NULL_B'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0327",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4619,
+    "end_line": 4629,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 💥 VFX SNIPPETS — ГОТОВЫЕ VFX СНИППЕТЫ > Мигалка (strobe light эффект) — Opacity",
+    "raw_code": "// Частота мигания под бит:\naudioLayer = thisComp.layer(\"Audio Amplitude\");\namp = audioLayer.effect(\"Both Channels\")(\"Slider\");\nfreq    = ease(amp, 0, 20, 2, 24);  // 2..24 Hz\nfps     = thisComp.frameRate;\nframe   = Math.floor(time * fps);\nstrobeOn = Math.floor(time * freq) % 2;\namp > 8 ? strobeOn * 100 : 100;\n// Мигает только когда достаточно громко\n",
+    "language": "javascript",
+    "normalized_hash": "49789842cde0a35e",
+    "target_property": "Transform.Opacity",
+    "parameters": [
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "SPEED_INTEGRATION_FALLACY",
+        "message": "Multiplying instantaneous variable frequency/speed by elapsed time does not integrate velocity; causes phase jumps."
+      }
+    ],
+    "classification": "INVALID_OR_UNSAFE"
+  },
+  {
+    "id": "bible_v2_b0333",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4709,
+    "end_line": 4716,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 💥 VFX SNIPPETS — ГОТОВЫЕ VFX СНИППЕТЫ > Echo trail — позиция с задержкой (ghost)",
+    "raw_code": "// N дублей слоя, каждый на своей задержке:\ndelay = (index - 1) * 0.05;  // 50ms между каждым дублем\n// На Position каждого дубля:\nthisComp.layer(\"Original\").transform.position.valueAtTime(time - delay);\n// На Opacity каждого дубля:\n// 100 - (index - 1) * 20;  // каждый следующий прозрачнее\n",
+    "language": "javascript",
+    "normalized_hash": "bf813c8df01e1e17",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Original'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0341",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4826,
+    "end_line": 4847,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔌 EXPRESSION TO EXPRESSION — ЦЕПОЧКИ > Slider читает Slider (цепочка обработки)",
+    "raw_code": "// STAGE 1: [Layer \"INPUT\"] -> Slider \"Raw Signal\"\n// Expression:\naudioLayer = thisComp.layer(\"Audio Amplitude\");\naudioLayer.effect(\"Both Channels\")(\"Slider\");\n\n// STAGE 2: [Layer \"PROCESS\"] -> Slider \"Smoothed\"\n// Expression:\nraw = thisComp.layer(\"INPUT\").effect(\"Raw Signal\")(\"Slider\");\nease(raw, 0, 20, 0, 100);\n\n// STAGE 3: [Layer \"PROCESS\"] -> Slider \"Inverted\"\n// Expression:\nsmooth = thisLayer.effect(\"Smoothed\")(\"Slider\");\n100 - smooth;\n\n// STAGE 4: рабочий слой читает PROCESS:\nproc = thisComp.layer(\"PROCESS\");\ns = proc.effect(\"Smoothed\")(\"Slider\");\nease(s, 0, 100, 100, 180);\n[s, s];\n",
+    "language": "javascript",
+    "normalized_hash": "3021a1bb2aae7a05",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Smoothed",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Raw Signal",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'INPUT'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'PROCESS'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0342",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4851,
+    "end_line": 4860,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔌 EXPRESSION TO EXPRESSION — ЦЕПОЧКИ > Арифметические цепочки",
+    "raw_code": "// Умножитель — отдельный Slider \"Multiplier\" = 2.5\n// Offset — отдельный Slider \"Offset\" = 30\n\nM = thisComp.layer(\"MASTER\");\nraw   = M.effect(\"Beat Raw\")(\"Slider\");\nmult  = M.effect(\"Multiplier\")(\"Slider\");\noffs  = M.effect(\"Offset\")(\"Slider\");\nclamp(raw * mult + offs, 0, 100);\n",
+    "language": "javascript",
+    "normalized_hash": "a5dde8e4c5cfa97e",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Multiplier",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Offset",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Beat Raw",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'MASTER'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0343",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4864,
+    "end_line": 4881,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔌 EXPRESSION TO EXPRESSION — ЦЕПОЧКИ > Conditional routing — разные входы в зависимости от чекбокса",
+    "raw_code": "M = thisComp.layer(\"MASTER\");\nuseBeat = M.effect(\"Use Beat\")(\"Checkbox\");\nuseProc = M.effect(\"Use Proc\")(\"Checkbox\");\n\nbeatVal = M.effect(\"Beat Smooth\")(\"Slider\");\nprocVal = M.effect(\"Proc Wave\")(\"Slider\");\n\nif (useBeat && useProc) {\n  (beatVal + procVal) / 2;  // микс\n} else if (useBeat) {\n  beatVal;\n} else if (useProc) {\n  procVal;\n} else {\n  50;  // дефолт\n}\n",
+    "language": "javascript",
+    "normalized_hash": "ab6e676750d4cbe4",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Beat Smooth",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Use Beat",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Use Proc",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Proc Wave",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'MASTER'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0344",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4885,
+    "end_line": 4892,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔌 EXPRESSION TO EXPRESSION — ЦЕПОЧКИ > Максимум из нескольких источников",
+    "raw_code": "// Реагирует на самый сильный из нескольких сигналов:\nM = thisComp.layer(\"MASTER\");\nbeatVal = M.effect(\"Beat Smooth\")(\"Slider\");\nprocVal = M.effect(\"Proc Wave\")(\"Slider\");\nwaveVal = M.effect(\"Sin Wave\")(\"Slider\");\nMath.max(beatVal, procVal, waveVal);\n",
+    "language": "javascript",
+    "normalized_hash": "f29c631d9ef994b6",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Beat Smooth",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Sin Wave",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Proc Wave",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'MASTER'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0345",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4896,
+    "end_line": 4907,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔌 EXPRESSION TO EXPRESSION — ЦЕПОЧКИ > Gate — сигнал проходит только если выше порога",
+    "raw_code": "M   = thisComp.layer(\"MASTER\");\nsig = M.effect(\"Beat Smooth\")(\"Slider\");\nthr = M.effect(\"Threshold\")(\"Slider\");  // значение порога из слайдера\n\nif (sig > thr) {\n  sig;\n} else {\n  0;\n}\n// Сигнал \"открывается\" только при превышении порога\n",
+    "language": "javascript",
+    "normalized_hash": "437c57b5e3cd8ac9",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Beat Smooth",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Threshold",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'MASTER'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0346",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 4911,
+    "end_line": 4923,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔌 EXPRESSION TO EXPRESSION — ЦЕПОЧКИ > Компрессор (динамическое сжатие диапазона)",
+    "raw_code": "M      = thisComp.layer(\"MASTER\");\nsig    = M.effect(\"Beat Raw\")(\"Slider\");\nthresh = 10;   // порог компрессии\nratio  = 4;    // степень компрессии выше порога\n\nif (sig <= thresh) {\n  sig;\n} else {\n  thresh + (sig - thresh) / ratio;\n}\n// Тихие удары — без изменений, громкие — сжимаются\n",
+    "language": "javascript",
+    "normalized_hash": "982fec2bee115af0",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "Beat Raw",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'MASTER'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0354",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 5070,
+    "end_line": 5083,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🏃 MOTION DESIGN PATTERNS — ПАТТЕРНЫ MOTION > Follow-through (инерция после остановки)",
+    "raw_code": "// Продолжает двигаться после того как основная часть остановилась\n// Хвост, волосы, детали\ndelay    = 0.2;   // отставание\ndamping  = 0.6;   // насколько меньше двигается хвост (0..1)\n\nleader = thisComp.layer(\"Body\");\nmainPos = leader.transform.position;\ndelayedPos = leader.transform.position.valueAtTime(time - delay);\n\n// Хвост = интерполяция между текущим и задержанным:\n[mainPos[0] + (delayedPos[0] - mainPos[0]) * damping,\n mainPos[1] + (delayedPos[1] - mainPos[1]) * damping];\n",
+    "language": "javascript",
+    "normalized_hash": "fe96687f4bb33695",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Body'."
+      }
+    ],
+    "classification": "REQUIRES_PARAMETERIZATION"
+  },
+  {
+    "id": "bible_v2_b0355",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 5087,
+    "end_line": 5099,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🏃 MOTION DESIGN PATTERNS — ПАТТЕРНЫ MOTION > Secondary animation (дополнительное движение детали)",
+    "raw_code": "// Деталь (ухо, антенна) добавляет своё движение поверх родительского\n// Без expression на родителе, только на ребёнке:\ndelay   = 0.12;\nparent_ = thisComp.layer(\"Head\");\n// Вычитаем задержанную позицию родителя из текущей -> скорость:\nposNow    = parent_.transform.position;\nposDelayed = parent_.transform.position.valueAtTime(time - delay);\nvelX = (posNow[0] - posDelayed[0]) * 1.5;  // усиливаем\nvelY = (posNow[1] - posDelayed[1]) * 1.5;\n// Добавляем к своей позиции:\n[value[0] + velX, value[1] + velY];\n",
+    "language": "javascript",
+    "normalized_hash": "c10f2e6bf47ca707",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Head'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0358",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 5154,
+    "end_line": 5170,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🏃 MOTION DESIGN PATTERNS — ПАТТЕРНЫ MOTION > Rubber band (резинка между двумя точками)",
+    "raw_code": "// Объект тянется как резинка между двумя точками\npointA = thisComp.layer(\"Anchor_A\").transform.position;\npointB = thisComp.layer(\"Anchor_B\").transform.position;\n\n// Параметрическая позиция вдоль резинки (t=0..1):\nt = 0.5;  // середина (или из Slider)\n// + провисание вниз:\nmidX = pointA[0] + (pointB[0] - pointA[0]) * t;\nmidY = pointA[1] + (pointB[1] - pointA[1]) * t;\n\n// Провис (sag) пропорционален длине:\ndist = length(pointA, pointB);\nsag  = dist * 0.2;  // 20% от длины\n\n[midX, midY + sag];\n",
+    "language": "javascript",
+    "normalized_hash": "09a4a8496477f9da",
+    "target_property": "Transform.Position",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Anchor_A'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'Anchor_B'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0364",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 5336,
+    "end_line": 5375,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > БЛОК 2: ПРОИЗВОДИТЕЛЬНОСТЬ — AE лагает и тормозит > Проблема: AE зависает / лагает при воспроизведении",
+    "raw_code": "ПРИЧИНА: Много слоёв, каждый ходит к аудио-слою напрямую.\n\nПОЧЕМУ ЭТО ПЛОХО — объяснение для новичков:\nПредставь: у тебя 30 слоёв. На каждом expression лезет на слой\n[Audio Amplitude] и читает значение. AE каждый кадр делает 30\nотдельных обращений к аудио-данным. Это как 30 человек одновременно\nоткрывают один и тот же тяжёлый файл с разных компов.\n\nПЛОХО (30 слоёв × прямая ссылка на аудио = 30 вычислений):\n// На каждом из 30 слоёв:\naudioLayer = thisComp.layer(\"Audio Amplitude\");\namp = audioLayer.effect(\"Both Channels\")(\"Slider\");\nease(amp, 0, 20, 100, 160);\n\nХОРОШО (1 вычисление, 30 слоёв читают результат):\n// Шаг 1: Создай Null-слой (Layer -> New -> Null Object)\n// Назови его \"BEAT_MASTER\"\n//\n// Шаг 2: Выдели Null \"BEAT_MASTER\"\n// Effect -> Expression Controls -> Slider Control\n// Появится эффект \"Slider Control\" в Effect Controls\n// Переименуй его в \"Beat\" (двойной клик на названии)\n//\n// Шаг 3: На Null \"BEAT_MASTER\" -> Slider Control \"Beat\" -> Slider\n// Alt+Click на секундомер -> вводи:\naudioLayer = thisComp.layer(\"Audio Amplitude\");\namp = audioLayer.effect(\"Both Channels\")(\"Slider\");\nease(amp, 0, 20, 0, 100);\n//\n// Шаг 4: На каждом рабочем слое -> Scale:\nnull_ = thisComp.layer(\"BEAT_MASTER\");\ns = null_.effect(\"Beat\")(\"Slider\");\nmapped = ease(s, 0, 100, 100, 160);\n[mapped, mapped];\n//\n// ИТОГ: AE считает аудио ОДИН раз (на Null),\n// остальные 30 слоёв просто читают готовое число.\n// Разница в скорости — в разы.\n",
+    "language": "",
+    "normalized_hash": "21ab2c8690bf9b1b",
+    "target_property": "Transform.Scale",
+    "parameters": [
+      {
+        "name": "Beat",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0369",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 5489,
+    "end_line": 5509,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > БЛОК 3: ОШИБКИ В EXPRESSION — красный текст > Проблема: Expression работал, потом сломался после переименования слоя",
+    "raw_code": "ПРИЧИНА: thisComp.layer(\"ИМЯ\") ищет слой по ИМЕНИ.\nПереименовал слой -> все expressions которые на него ссылаются — сломались.\n\nРЕШЕНИЕ 1: Выработай привычку — называй технические слои раз и навсегда\nИмена которые никогда не меняй:\n\"Audio Amplitude\" — стандартное имя от Convert Audio to Keyframes\n\"BEAT_MASTER\"     — твой главный null\n\"PROC_MASTER\"     — процедурный null\n\"CONTROLS\"        — null с контролами\n\nРЕШЕНИЕ 2: Ссылка через переменную в начале expression\n// Если вдруг переименуешь — меняешь только одну строку:\nmasterNull = thisComp.layer(\"BEAT_MASTER\");  // <-- только тут\nbeat = masterNull.effect(\"Beat\")(\"Slider\");\n// ...остальной код не трогаешь\n\nРЕШЕНИЕ 3: thisComp.layer(index) — по номеру, не по имени\n// Ненадёжно (порядок слоёв меняется), используй только для быстрых тестов\nthisComp.layer(1);  // первый слой в таймлайне\n",
+    "language": "",
+    "normalized_hash": "8277c1c2c6a59d29",
+    "target_property": "Text.SourceText",
+    "parameters": [
+      {
+        "name": "Beat",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'ИМЯ'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  },
+  {
+    "id": "bible_v2_b0374",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 5634,
+    "end_line": 5686,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > БЛОК 5: СЛАЙДЕР КОНТРОЛ — как сделать и использовать > Пошаговая инструкция: создать Slider Control с нуля",
+    "raw_code": "ШАГ 1: Создай Null-объект\n- Layer -> New -> Null Object\n- Появится слой \"Null 1\" в таймлайне\n- Двойной клик на название -> переименуй в \"BEAT_MASTER\"\n- Enter для подтверждения\n\nШАГ 2: Добавь Slider Control на Null\n- Выдели \"BEAT_MASTER\" в таймлайне\n- Effect -> Expression Controls -> Slider Control\n- В окне Effect Controls появится \"Slider Control\" с числом 0\n- Двойной клик на \"Slider Control\" -> переименуй в \"Beat\"\n- Enter\n\nШАГ 3: Поставь expression на Slider\n- В таймлайне разверни BEAT_MASTER: нажми стрелку слева\n- Разверни Effects -> Beat -> Slider\n- Alt+Click на иконку секундомера слева от \"Slider\"\n- Появится поле ввода\n- Введи:\n  audioLayer = thisComp.layer(\"Audio Amplitude\");\n  amp = audioLayer.effect(\"Both Channels\")(\"Slider\");\n  ease(amp, 0, 20, 0, 100);\n- Enter на нумпаде\n\nШАГ 4: Проверь что Slider работает\n- Нажми Space — воспроизведи комп\n- В Effect Controls BEAT_MASTER смотри на \"Beat\" Slider\n- Он должен двигаться в такт музыке\n- Если стоит на 0 — проверь что [Audio Amplitude] создан и назван правильно\n\nШАГ 5: Подключи рабочий слой к Slider\n- Выдели рабочий слой (тот который должен реагировать)\n- Нажми S -> разворачивается Scale\n- Alt+Click на секундомер Scale\n- Введи:\n  null_ = thisComp.layer(\"BEAT_MASTER\");\n  s = null_.effect(\"Beat\")(\"Slider\");\n  mapped = ease(s, 0, 100, 100, 150);\n  [mapped, mapped];\n- Enter на нумпаде\n- Воспроизведи — слой должен реагировать!\n\nШАГ 6: Подключи остальные слои\n- Повтори Шаг 5 для каждого слоя\n- На каждом — только две строки меняются (что берём и как маппим):\n  null_ = thisComp.layer(\"BEAT_MASTER\");  // эта строка одинакова везде\n  s = null_.effect(\"Beat\")(\"Slider\");      // эта тоже\n  // дальше — под каждое свойство своё:\n  ease(s, 0, 100, 0, 45);                 // для Rotation\n  // или:\n  ease(s, 0, 100, 100, 0);                // для инверсии\n",
+    "language": "",
+    "normalized_hash": "efeb49527e0d6bde",
+    "target_property": "Transform.Scale",
+    "parameters": [
+      {
+        "name": "Beat",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      }
+    ],
+    "classification": "DOCUMENTATION_ONLY"
+  },
+  {
+    "id": "bible_v2_b0375",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 5690,
+    "end_line": 5718,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > БЛОК 5: СЛАЙДЕР КОНТРОЛ — как сделать и использовать > Несколько Slider Control на одном Null",
+    "raw_code": "ЗАЧЕМ НЕСКОЛЬКО:\n- \"Beat Smooth\" — плавный отклик (для scale, opacity)\n- \"Beat Sharp\"  — резкий отклик (для ударных акцентов)\n- \"Beat Raw\"    — сырой сигнал (для диагностики)\n- \"Energy\"      — глобальная интенсивность (кейфреймируешь вручную)\n\nКАК ДОБАВИТЬ ВТОРОЙ:\n1. Выдели BEAT_MASTER\n2. Effect -> Expression Controls -> Slider Control (снова)\n3. Переименуй в \"Beat Sharp\"\n4. Alt+Click на его Slider -> введи:\n   audioLayer = thisComp.layer(\"Audio Amplitude\");\n   amp = audioLayer.effect(\"Both Channels\")(\"Slider\");\n   easeOut(amp, 0, 20, 0, 100);  // easeOut = резче чем ease\n5. Enter\n\nТЕПЕРЬ У ТЕБЯ ДВА СЛАЙДЕРА:\n- \"Beat\"       -> ease()    -> плавный\n- \"Beat Sharp\" -> easeOut() -> резкий\n\nИспользуй нужный на каждом слое:\n// Для нежного Scale (плавный):\nnull_ = thisComp.layer(\"BEAT_MASTER\");\ns = null_.effect(\"Beat\")(\"Slider\");\n// Для резкого вспышки Opacity (резкий):\nnull_ = thisComp.layer(\"BEAT_MASTER\");\ns = null_.effect(\"Beat Sharp\")(\"Slider\");\n",
+    "language": "",
+    "normalized_hash": "97f1d1d26fd9cd5e",
+    "target_property": "Transform.Scale",
+    "parameters": [
+      {
+        "name": "Beat Sharp",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Beat",
+        "type": "Slider",
+        "source": "ae_effect"
+      },
+      {
+        "name": "Both Channels",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      }
+    ],
+    "classification": "DOCUMENTATION_ONLY"
+  },
+  {
+    "id": "bible_v2_b0376",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 5722,
+    "end_line": 5739,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > БЛОК 5: СЛАЙДЕР КОНТРОЛ — как сделать и использовать > Как читать Slider из другого слоя (пикер)",
+    "raw_code": "СПОСОБ 1: Вручную (как описано выше)\nnull_ = thisComp.layer(\"BEAT_MASTER\");\ns = null_.effect(\"Beat\")(\"Slider\");\n\nСПОСОБ 2: Через Expression Pick Whip (визуально, без текста)\n1. Открой нужное свойство (например Scale) с expression полем\n2. В поле expression есть иконка \"спираль\" (pick whip)\n3. Зажми её и протяни к Slider Control на BEAT_MASTER\n4. AE автоматически напишет правильную ссылку\n5. После этого ты можешь руками дописать ease() вокруг:\n   // AE написал что-то вроде:\n   thisComp.layer(\"BEAT_MASTER\").effect(\"Beat\")(\"Slider\")\n   // Ты дописываешь:\n   s = thisComp.layer(\"BEAT_MASTER\").effect(\"Beat\")(\"Slider\");\n   ease(s, 0, 100, 100, 160);\n   [ease(s, 0, 100, 100, 160), ease(s, 0, 100, 100, 160)];\n",
+    "language": "",
+    "normalized_hash": "fa50dcd220f544ee",
+    "target_property": "Transform.Scale",
+    "parameters": [
+      {
+        "name": "Beat",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      }
+    ],
+    "classification": "DOCUMENTATION_ONLY"
+  },
+  {
+    "id": "bible_v2_b0418",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 6773,
+    "end_line": 6804,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > БЛОК 19: СВЯЗЬ МЕЖДУ СЛОЯМИ — не находит слой > Проблема: thisComp.layer(\"ИМЯ\") — cannot find layer",
+    "raw_code": "ПОЛНЫЙ ЧЕКЛИСТ:\n\n1. РЕГИСТР:\n   thisComp.layer(\"beat_master\")  // НЕПРАВИЛЬНО\n   thisComp.layer(\"BEAT_MASTER\")  // ПРАВИЛЬНО\n   // AE чувствителен к регистру!\n\n2. ПРОБЕЛЫ В КОНЦЕ:\n   // Иногда при переименовании добавляется пробел:\n   \"BEAT_MASTER \"  // пробел в конце — не видно, но слой не найдёт\n   // Решение: двойной клик на имя слоя -> выдели всё -> перепечатай заново\n\n3. СЛОЙ В ДРУГОМ КОМПЕ:\n   // thisComp.layer() ищет только в ТЕКУЩЕМ компе\n   // Если слой в Pre-comp — из родительского компа его не видно\n   // Решение: положи BEAT_MASTER в тот же комп где используешь его\n\n4. СЛОЙ ВЫКЛЮЧЕН (shy):\n   // Shy слои (иконка человечка) скрыты из таймлайна визуально,\n   // но thisComp.layer() их НАХОДИТ — это не проблема.\n   // Но если слой Solo — другие могут вести себя иначе.\n\n5. СЛОЙ ЗА ПРЕДЕЛАМИ WORK AREA:\n   // Если [Audio Amplitude] короче чем комп — в конце амплитуда = 0\n   // Решение: убедись что слой тянется на весь комп\n\nДИАГНОСТИКА:\n// Добавь на Source Text:\nthisComp.numLayers + \" layers in comp\";\n// Показывает сколько слоёв AE видит. Посчитай сам — совпадает?\n",
+    "language": "",
+    "normalized_hash": "4dceda0429cf28b7",
+    "target_property": "Generic.Property",
+    "parameters": [],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'beat_master'."
+      },
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'BEAT_MASTER'."
+      }
+    ],
+    "classification": "DOCUMENTATION_ONLY"
+  },
+  {
+    "id": "bible_v2_b0432",
+    "source_id": "bible_v2",
+    "source_title": "AE Expressions — Beat Sync Bible (Extensive Edition)",
+    "start_line": 7169,
+    "end_line": 7231,
+    "heading": "📚 QUICK START — КАК ЧИТАТЬ EXPRESSIONS > 🔧 БЫСТРЫЙ СПРАВОЧНИК — ПОЛНЫЙ",
+    "raw_code": "// ── МАППИНГ ──────────────────────────────────────────────────────\nlinear(t, tMin, tMax, val1, val2)      — линейный маппинг\nease(t, tMin, tMax, val1, val2)        — с плавными краями (оба)\neaseIn(t, tMin, tMax, val1, val2)      — плавный вход, резкий выход\neaseOut(t, tMin, tMax, val1, val2)     — резкий вход, плавный выход\nclamp(v, min, max)                     — ограничитель диапазона\n\n// ── ШУМ И РАНДОМ ─────────────────────────────────────────────────\nwiggle(freq, amp, octaves, ampMult, t) — шум Перлина\nrandom(min, max)                       — случайное число\nseedRandom(seed, timeless)             — инициализация рандома\n                                         timeless=true — фиксирует seed\n\n// ── МАТЕМАТИКА ───────────────────────────────────────────────────\nMath.sin(t)                            — синус (-1..1)\nMath.cos(t)                            — косинус (-1..1)\nMath.PI                                — 3.14159...\nMath.abs(v)                            — модуль числа\nMath.floor(v)                          — округление вниз\nMath.ceil(v)                           — округление вверх\nMath.round(v)                          — округление\nMath.sqrt(v)                           — квадратный корень\nMath.exp(v)                            — e в степени v (затухание!)\nMath.pow(base, exp)                    — степень\nMath.min(a, b)                         — минимум двух чисел\nMath.max(a, b)                         — максимум двух чисел\n\n// ── ВРЕМЯ И СЛОЙ ─────────────────────────────────────────────────\ntime                                   — текущее время в секундах\nthisComp.frameDuration                 — длительность одного кадра\nthisComp.frameRate                     — кадров в секунду\nthisComp.numLayers                     — количество слоёв в компе\nthisComp.width / thisComp.height       — размеры компа\nvalue                                  — текущее кейфреймовое значение\nvalueAtTime(t)                         — значение свойства в момент t\nindex                                  — номер слоя (уникален, с 1)\ninPoint / outPoint                     — начало/конец слоя в секундах\n\n// ── ГЕОМЕТРИЯ ────────────────────────────────────────────────────\nlength(v1, v2)                         — расстояние между двумя точками\nnormalize(v)                           — вектор длиной 1\nadd(v1, v2)                            — сложение векторов\nsub(v1, v2)                            — вычитание векторов\nmul(v, scalar)                         — умножение вектора на скаляр\ndot(v1, v2)                            — скалярное произведение\ncross(v1, v2)                          — векторное произведение\n\n// ── КООРДИНАТЫ ───────────────────────────────────────────────────\ntoComp(point)                          — из локальных в comp-координаты\nfromComp(point)                        — из comp в локальные\ntoWorld(point)                         — в мировые координаты\nfromWorld(point)                       — из мировых в локальные\n\n// ── ТЕКСТ И СЛОЙ ─────────────────────────────────────────────────\nsourceRectAtTime(t)                    — геометрия слоя (width, height, top, left)\nthisLayer.name                         — имя текущего слоя\nthisComp.layer(\"name\")                 — найти слой по имени\nthisComp.layer(n)                      — найти слой по номеру\nthisLayer.effect(\"name\")(\"Slider\")     — читать Slider Control\nthisComp.marker.numKeys                — количество маркеров в компе\nthisComp.marker.key(n).time            — время n-го маркера\n",
+    "language": "",
+    "normalized_hash": "a641695a4870ffc9",
+    "target_property": "Slider",
+    "parameters": [
+      {
+        "name": "name",
+        "type": "Slider",
+        "source": "ae_effect"
+      }
+    ],
+    "flaws": [
+      {
+        "type": "HARDCODED_LAYER_DEPENDENCY",
+        "message": "Expression depends on specific layer name 'name'."
+      }
+    ],
+    "classification": "READY_RECIPE"
+  }
+]

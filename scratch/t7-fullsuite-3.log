@@ -1,0 +1,97 @@
+.s....................s.FFF......................................F................F..........F.....ss.ss............sF...............
+======================================================================
+FAIL: test_16_correct_deployment_and_mirror_hashes (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_16_correct_deployment_and_mirror_hashes)
+16. Correct deployment and mirror byte-identical hashes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_forensic_release_integrity.py", line 910, in test_16_correct_deployment_and_mirror_hashes
+    self.assertEqual(dist_sha, mirror_sha, "Dist and Backup Mirror must be byte-identical")
+AssertionError: '2c4cde72f3b51250af2cae2f754efe38173ca88fa3926b7180a08077fed1a8ee' != '479ec61b831290e06ba779f0dc34415d7655686d29a2e3641d9c087348ed14de'
+- 2c4cde72f3b51250af2cae2f754efe38173ca88fa3926b7180a08077fed1a8ee
++ 479ec61b831290e06ba779f0dc34415d7655686d29a2e3641d9c087348ed14de
+ : Dist and Backup Mirror must be byte-identical
+
+======================================================================
+FAIL: test_controller_creation_failure_rollback (unit.test_p0_hardening.TestP0Hardening.test_controller_creation_failure_rollback)
+Regression Test K: Failure during controller creation rolls back and aborts expression assignment.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_p0_hardening.py", line 415, in test_controller_creation_failure_rollback
+    self.assertEqual(proc.returncode, 0, f"Controller rollback test failed:\n{proc.stderr}\n{proc.stdout}")
+AssertionError: 3 != 0 : Controller rollback test failed:
+FAIL: Partial effects were not rolled back/removed!
+
+
+
+======================================================================
+FAIL: test_foreign_expression_preservation_mock (unit.test_p0_hardening.TestP0Hardening.test_foreign_expression_preservation_mock)
+Regression Test A: Verify that foreign expression is preserved byte-identical.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_p0_hardening.py", line 94, in test_foreign_expression_preservation_mock
+    self.assertEqual(proc.returncode, 0, f"Foreign expression test failed:\n{proc.stderr}\n{proc.stdout}")
+AssertionError: 4 != 0 : Foreign expression test failed:
+FAIL: res.conflictCount should be 1
+
+
+
+======================================================================
+FAIL: test_r52_real_live_and_mirror_hashes (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r52_real_live_and_mirror_hashes)
+R52: Mirror matches expected release hash (WINDOWS_DEPLOYMENT tier).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_regression_r33_r53.py", line 643, in test_r52_real_live_and_mirror_hashes
+    self.assertEqual(dist_sha, mirror_sha, "Dist and Mirror must match release hash")
+AssertionError: '2c4cde72f3b51250af2cae2f754efe38173ca88fa3926b7180a08077fed1a8ee' != '479ec61b831290e06ba779f0dc34415d7655686d29a2e3641d9c087348ed14de'
+- 2c4cde72f3b51250af2cae2f754efe38173ca88fa3926b7180a08077fed1a8ee
++ 479ec61b831290e06ba779f0dc34415d7655686d29a2e3641d9c087348ed14de
+ : Dist and Mirror must match release hash
+
+======================================================================
+FAIL: test_r69_multiple_selected_properties_no_identity_confusion (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r69_multiple_selected_properties_no_identity_confusion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_regression_r54_r70.py", line 473, in test_r69_multiple_selected_properties_no_identity_confusion
+    self.assertEqual(proc.returncode, 0, "Snippet failed:\n" + proc.stderr + "\n" + proc.stdout)
+AssertionError: 1 != 0 : Snippet failed:
+FAIL r69: Targeting 2 selected properties.
+
+
+
+======================================================================
+FAIL: test_r79_pinned_apply_and_remove (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r79_pinned_apply_and_remove)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_regression_r71_r82.py", line 505, in test_r79_pinned_apply_and_remove
+    self.assertEqual(proc.returncode, 0, proc.stderr + "\n" + proc.stdout)
+AssertionError: 1 != 0 : FAIL r79a: apply failed: {"ok":false,"status":"TARGET_INCOMPATIBLE","appliedCount":0,"failedCount":0,"conflictCount":0,"skipCount":1,"message":"Pinned target resolved.","warnings":[]}
+
+
+
+======================================================================
+FAIL: test_r96_recipe_change_recomputes_scroll_geometry (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r96_recipe_change_recomputes_scroll_geometry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_regression_r83_r105.py", line 474, in test_r96_recipe_change_recomputes_scroll_geometry
+    self.assertEqual(proc.returncode, 0, f"R96 failed:\n{proc.stderr}\n{proc.stdout}")
+AssertionError: 3 != 0 : R96 failed:
+FAIL r96: content top drifted: [8,59]
+
+
+
+----------------------------------------------------------------------
+Ran 133 tests in 5.624s
+
+FAILED (failures=7, skipped=7)
+[7/8] Verifying deployed files...
+[7/8] Verifying deployed files...
+  [DEPLOY_BLOCKED] Live AE installation failed: Permission denied
+  Execute elevated install: run scripts/install_admin.cmd or run 'python scripts/manage.py repair-mirror' as Administrator.
+[7/8] Verifying deployed files...
+[7/8] Verifying deployed files...
+  [PASS] Filesystem verification PASSED: Live (3957fdc4...) and Mirror (3957fdc4...) match release SHA-256.
+[7/8] Verifying deployed files...
+[2/8] Assembling ExtendScript modular bundle...
+  BUILD_ID: 0.0.1+caa57b6b89c0
+[2/8] Assembling ExtendScript modular bundle...
+  BUILD_ID: 0.0.1+caa57b6b89c0

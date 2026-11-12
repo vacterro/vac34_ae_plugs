@@ -1,0 +1,14 @@
+{
+  "requirements": {
+    "SRC-007:R001": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-7 closed with verification evidence in LOG: verify -> PASS [target: T-7] conf: high -- python -m unittest discover -s tests -p test_*.py (VAC34_EXPORTING=1): 133 tests OK, 9 skipped (R95/R104/R105 host NOT_RUN; scenario L opt-in VAC34_DEPLOYMENT_CHECK; R101 nested-export guard); python build/builder.py --no-tests: BUILD_ID 0.0.1+66244487217f, dist 279247 bytes sha256 e3e50ec904e2aa9c5293873c70e03f3ac82b4b84da1dfa74d1a6a79d085809bd; VAC34_DE",
+      "text": "T-7: pinned target integrity, shared master lifecycle, ScriptUI acceptance, Glow Threshold P0 campaign per SAIHANDOFF",
+      "verification": "the Work this request created reached its own verification gate; see the T-7 VERIFY cycle in .saipen/LOG.md",
+      "work": "T-7"
+    }
+  },
+  "schema_version": 1
+}

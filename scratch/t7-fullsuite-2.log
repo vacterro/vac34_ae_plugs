@@ -1,0 +1,105 @@
+.s....................s..FF........................................F.............FFF........FF.....ss.ss............s................
+======================================================================
+FAIL: test_controller_creation_failure_rollback (unit.test_p0_hardening.TestP0Hardening.test_controller_creation_failure_rollback)
+Regression Test K: Failure during controller creation rolls back and aborts expression assignment.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_p0_hardening.py", line 415, in test_controller_creation_failure_rollback
+    self.assertEqual(proc.returncode, 0, f"Controller rollback test failed:\n{proc.stderr}\n{proc.stdout}")
+AssertionError: 3 != 0 : Controller rollback test failed:
+FAIL: Partial effects were not rolled back/removed!
+
+
+
+======================================================================
+FAIL: test_foreign_expression_preservation_mock (unit.test_p0_hardening.TestP0Hardening.test_foreign_expression_preservation_mock)
+Regression Test A: Verify that foreign expression is preserved byte-identical.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_p0_hardening.py", line 94, in test_foreign_expression_preservation_mock
+    self.assertEqual(proc.returncode, 0, f"Foreign expression test failed:\n{proc.stderr}\n{proc.stdout}")
+AssertionError: 4 != 0 : Foreign expression test failed:
+FAIL: res.conflictCount should be 1
+
+
+
+======================================================================
+FAIL: test_r54_failed_same_recipe_reapply_restores_original_expression (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r54_failed_same_recipe_reapply_restores_original_expression)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_regression_r54_r70.py", line 92, in test_r54_failed_same_recipe_reapply_restores_original_expression
+    self.assertEqual(proc.returncode, 0, "Snippet failed:\n" + proc.stderr + "\n" + proc.stdout)
+AssertionError: 4 != 0 : Snippet failed:
+FAIL r54: status=TARGET_INCOMPATIBLE
+
+
+
+======================================================================
+FAIL: test_r68_keyframes_preserved_after_failed_and_successful_operations (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r68_keyframes_preserved_after_failed_and_successful_operations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_regression_r54_r70.py", line 434, in test_r68_keyframes_preserved_after_failed_and_successful_operations
+    self.assertEqual(proc.returncode, 0, "Snippet failed:\n" + proc.stderr + "\n" + proc.stdout)
+AssertionError: 2 != 0 : Snippet failed:
+FAIL r68: Targeting 1 selected properties.
+
+
+
+======================================================================
+FAIL: test_r69_multiple_selected_properties_no_identity_confusion (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r69_multiple_selected_properties_no_identity_confusion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_regression_r54_r70.py", line 473, in test_r69_multiple_selected_properties_no_identity_confusion
+    self.assertEqual(proc.returncode, 0, "Snippet failed:\n" + proc.stderr + "\n" + proc.stdout)
+AssertionError: 1 != 0 : Snippet failed:
+FAIL r69: Targeting 2 selected properties.
+
+
+
+======================================================================
+FAIL: test_r70_host_expressionerror_complete_rollback (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r70_host_expressionerror_complete_rollback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_regression_r54_r70.py", line 498, in test_r70_host_expressionerror_complete_rollback
+    self.assertEqual(proc.returncode, 0, "Snippet failed:\n" + proc.stderr + "\n" + proc.stdout)
+AssertionError: 3 != 0 : Snippet failed:
+FAIL r70: status=TARGET_INCOMPATIBLE
+
+
+
+======================================================================
+FAIL: test_r78_partial_batch_status (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r78_partial_batch_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_regression_r71_r82.py", line 457, in test_r78_partial_batch_status
+    self.assertEqual(proc.returncode, 0, proc.stderr + "\n" + proc.stdout)
+AssertionError: 1 != 0 : FAIL r78: status=TARGET_INCOMPATIBLE
+
+
+
+======================================================================
+FAIL: test_r79_pinned_apply_and_remove (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r79_pinned_apply_and_remove)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\unit\test_regression_r71_r82.py", line 505, in test_r79_pinned_apply_and_remove
+    self.assertEqual(proc.returncode, 0, proc.stderr + "\n" + proc.stdout)
+AssertionError: 1 != 0 : FAIL r79a: apply failed: {"ok":false,"status":"TARGET_INCOMPATIBLE","appliedCount":0,"failedCount":0,"conflictCount":0,"skipCount":1,"message":"Pinned target resolved.","warnings":[]}
+
+
+
+----------------------------------------------------------------------
+Ran 133 tests in 4.442s
+
+FAILED (failures=8, skipped=7)
+[7/8] Verifying deployed files...
+[7/8] Verifying deployed files...
+  [DEPLOY_BLOCKED] Live AE installation failed: Permission denied
+  Execute elevated install: run scripts/install_admin.cmd or run 'python scripts/manage.py repair-mirror' as Administrator.
+[7/8] Verifying deployed files...
+[7/8] Verifying deployed files...
+  [PASS] Filesystem verification PASSED: Live (3957fdc4...) and Mirror (3957fdc4...) match release SHA-256.
+[7/8] Verifying deployed files...
+[2/8] Assembling ExtendScript modular bundle...
+  BUILD_ID: 0.0.1+090f63df9262
+[2/8] Assembling ExtendScript modular bundle...
+  BUILD_ID: 0.0.1+090f63df9262

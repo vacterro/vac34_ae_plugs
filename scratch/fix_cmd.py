@@ -1,0 +1,56 @@
+import os
+
+lines = [
+    "@echo off",
+    "setlocal enabledelayedexpansion",
+    "title vac34_AE Live Panel Elevated Installer",
+    "",
+    ":: Guard against infinite recursion loop",
+    'if "%~1"=="--elevated" goto :run_install',
+    "",
+    ":: Robust Administrator check using fltmc (never net session, which fails when Server service is disabled)",
+    "fltmc >nul 2>&1",
+    "if %errorlevel% equ 0 goto :run_install",
+    "",
+    "echo [REQUESTING ELEVATION] Restarting with Administrator privileges...",
+    'powershell -NoProfile -Command "Start-Process cmd.exe -ArgumentList \'/c \"\"%~f0\" --elevated\"\' -Verb RunAs"',
+    "exit /b",
+    "",
+    ":run_install",
+    'cd /d "%~dp0.."',
+    'set "SCRIPT_DIR=%~dp0"',
+    'set "INSTALL_PY=%SCRIPT_DIR%install_live.py"',
+    "",
+    "echo ========================================================",
+    "echo  vac34_AE — Master Expressions Studio Live Installer",
+    "echo ========================================================",
+    "echo.",
+    "",
+    "where python >nul 2>&1",
+    "if %errorlevel% equ 0 (",
+    '    python "%INSTALL_PY%"',
+    '    set "EXIT_CODE=!errorlevel!"',
+    ") else (",
+    '    py -3 "%INSTALL_PY%"',
+    '    set "EXIT_CODE=!errorlevel!"',
+    ")",
+    "",
+    "if !EXIT_CODE! equ 0 (",
+    "    echo.",
+    "    echo [SUCCESS] Elevated installation completed and verified!",
+    ") else (",
+    "    echo.",
+    "    echo [ERROR] Installation failed with exit code !EXIT_CODE!.",
+    ")",
+    "",
+    "echo.",
+    "echo Press any key to close this window.",
+    "pause >nul",
+    "exit /b !EXIT_CODE!",
+    ""
+]
+
+target = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "scripts", "install_admin.cmd")
+with open(target, "wb") as f:
+    f.write("\r\n".join(lines).encode("utf-8"))
+print("Done. Bytes written:", os.path.getsize(target))

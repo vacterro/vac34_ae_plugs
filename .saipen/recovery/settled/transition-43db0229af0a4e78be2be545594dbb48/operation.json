@@ -1,0 +1,38 @@
+{
+  "op_id": "transition-43db0229af0a4e78be2be545594dbb48",
+  "operation": "transition",
+  "created_at": "2026-11-08T06:14:23Z",
+  "agent": "saipen",
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "project_lineage": "lineage-bd0fe1a39fe1441f88a83421ede30e5c",
+  "semantic_payload_hash": "ae9f7f4610747945",
+  "preconditions": {
+    ".saipen/STATE.md": "18b6af76237d2cc1",
+    ".saipen/LOG.md": "48e46ebe2350b017"
+  },
+  "read_preconditions": {
+    ".saipen/BOARD.md": "911c7800242a251f",
+    ".saipen/logs": "tree-missing-v1"
+  },
+  "verification_policy": "core_fast",
+  "status": "COMMITTED",
+  "progress_index": 2,
+  "targets": [
+    {
+      "path": ".saipen/LOG.md",
+      "role": "log",
+      "action": "write",
+      "before_hash": "48e46ebe2350b017",
+      "after_hash": "2ff06f4c44fd0021",
+      "applied": true
+    },
+    {
+      "path": ".saipen/STATE.md",
+      "role": "state",
+      "action": "write",
+      "before_hash": "18b6af76237d2cc1",
+      "after_hash": "2abef3d7a1104ace",
+      "applied": true
+    }
+  ]
+}

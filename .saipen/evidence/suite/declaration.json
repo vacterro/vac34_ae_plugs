@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "kind": "saipen-suite-declaration",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/",
+    "-q"
+  ],
+  "command_sha256": "f6b6d63f26b596b8866aac6f7345b22c90cdc0e1548c2c00db76cc0108ebc08b",
+  "timeout_s": 3600,
+  "declared_utc": "2026-11-12T00:14:15Z"
+}

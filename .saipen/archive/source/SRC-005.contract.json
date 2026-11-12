@@ -1,0 +1,14 @@
+{
+  "clauses": {
+    "SRC-005:R001": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "vac34_AE P0: expression integrity, property identity, dim compatibility, audio identity, regressions R54-R70, release pipeline"
+    }
+  },
+  "derived_at": "2026-11-11T21:58:52Z",
+  "derived_from": "SRC-005",
+  "interpretation_revision": 1,
+  "schema_version": 1,
+  "source_sha256": "3ccb739468e20fd98455087554294aa5356c8059746b459bdb769066b018996f"
+}

@@ -1,0 +1,14 @@
+{
+  "requirements": {
+    "SRC-005:R001": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-5 closed with verification evidence in LOG: verify -> PASS [target: T-5] conf: high -- python -m pytest tests/ -q: 95 passed (17 R54-R70 + 78 suite); python build/builder.py --deploy: dist 211179 bytes sha256 a9db22c042366439d86c4a9be04c4ed766346f69d2ad693e78db00fe7fd4b206, Live AE + Mirror byte-identical [7/8] PASS",
+      "text": "vac34_AE P0: expression integrity, property identity, dim compatibility, audio identity, regressions R54-R70, release pipeline",
+      "verification": "the Work this request created reached its own verification gate; see the T-5 VERIFY cycle in .saipen/LOG.md",
+      "work": "T-5"
+    }
+  },
+  "schema_version": 1
+}

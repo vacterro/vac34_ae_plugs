@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "kind": "saipen-suite-record",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/",
+    "-q"
+  ],
+  "command_sha256": "f6b6d63f26b596b8866aac6f7345b22c90cdc0e1548c2c00db76cc0108ebc08b",
+  "status": "PASS",
+  "exit_code": 0,
+  "totals": {
+    "runner": "pytest",
+    "ran": 108,
+    "passed": 108,
+    "red": 0,
+    "skipped": 0,
+    "counts": {
+      "passed": 108
+    }
+  },
+  "duration_s": 23.7,
+  "timeout_s": 3600,
+  "subject_before": "tree:2a61cb06304da5fa22a096e7ccd36543ba370932592876971d181fb60470c71f",
+  "subject": "tree:b78ecfe520b028e849cf4900dde24cb7b1d223e671b3372e39ee4ffd9f9268ac",
+  "stdout_tail": "........................................................................ [ 66%]\n....................................                                     [100%]\n108 passed in 22.28s\n",
+  "stderr_tail": "",
+  "process_s": 23.593,
+  "overhead_s": {
+    "pre_hash": 0.063,
+    "post_hash": 0.063,
+    "parsing": 0.0,
+    "total": 0.126
+  },
+  "scripts": [],
+  "script_timings_available": false,
+  "first_failure_line": null,
+  "fail_fast": false,
+  "stopped_on_failure": false,
+  "tree_changed_during_run": true,
+  "finished_utc": "2026-11-12T00:14:39Z",
+  "verdict": "PASS",
+  "problems": []
+}

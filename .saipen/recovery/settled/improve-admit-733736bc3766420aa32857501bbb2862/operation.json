@@ -1,0 +1,35 @@
+{
+  "op_id": "improve-admit-733736bc3766420aa32857501bbb2862",
+  "operation": "improve_admit",
+  "created_at": "2026-11-07T14:38:32Z",
+  "agent": "saipen-01",
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "project_lineage": "lineage-bd0fe1a39fe1441f88a83421ede30e5c",
+  "semantic_payload_hash": "6f5de17fd468f9a7",
+  "preconditions": {
+    ".saipen/improve/imp-vac34_ae_plugs-20261107-1/MANIFEST.md": "",
+    ".saipen/improve/imp-vac34_ae_plugs-20261107-1/saipen-01/saipen_improve_SAIPEN.md": ""
+  },
+  "read_preconditions": {},
+  "verification_policy": "improve_atomic_file",
+  "status": "COMMITTED",
+  "progress_index": 2,
+  "targets": [
+    {
+      "path": ".saipen/improve/imp-vac34_ae_plugs-20261107-1/MANIFEST.md",
+      "role": "manifest",
+      "action": "write",
+      "before_hash": "",
+      "after_hash": "990cb7a3a869724d",
+      "applied": true
+    },
+    {
+      "path": ".saipen/improve/imp-vac34_ae_plugs-20261107-1/saipen-01/saipen_improve_SAIPEN.md",
+      "role": "report",
+      "action": "write",
+      "before_hash": "",
+      "after_hash": "60a0b3f20e9f7e24",
+      "applied": true
+    }
+  ]
+}

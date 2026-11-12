@@ -1,0 +1,14 @@
+{
+  "clauses": {
+    "SRC-006:R001": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Scrollable fixed-footer panel, always-visible apply results, pinned composition and target, real audio source validation, partial-success reporting and automatic build identity"
+    }
+  },
+  "derived_at": "2026-11-12T00:33:46Z",
+  "derived_from": "SRC-006",
+  "interpretation_revision": 1,
+  "schema_version": 1,
+  "source_sha256": "f7f9610328bf1511f28da11a4236c1889e1d4bdae1266382c32654a3697be8a5"
+}

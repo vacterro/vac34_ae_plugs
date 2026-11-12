@@ -1,0 +1,46 @@
+{
+  "op_id": "claim-8b1851e84f054746ba19b4e639700253",
+  "operation": "claim",
+  "created_at": "2026-11-12T01:26:32Z",
+  "agent": "saipen",
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "project_lineage": "lineage-bd0fe1a39fe1441f88a83421ede30e5c",
+  "semantic_payload_hash": "54bef4762d84e60b",
+  "preconditions": {
+    ".saipen/STATE.md": "6e22ca741ee76798",
+    ".saipen/BOARD.md": "f3da2cfe0dced46b",
+    ".saipen/LOG.md": "bcae79c59730e7b2"
+  },
+  "read_preconditions": {
+    ".saipen/logs": "tree-missing-v1"
+  },
+  "verification_policy": "core_fast",
+  "status": "COMMITTED",
+  "progress_index": 3,
+  "targets": [
+    {
+      "path": ".saipen/LOG.md",
+      "role": "log",
+      "action": "write",
+      "before_hash": "bcae79c59730e7b2",
+      "after_hash": "2fb9623542cd481b",
+      "applied": true
+    },
+    {
+      "path": ".saipen/BOARD.md",
+      "role": "board",
+      "action": "write",
+      "before_hash": "f3da2cfe0dced46b",
+      "after_hash": "38a1efa30a7f4053",
+      "applied": true
+    },
+    {
+      "path": ".saipen/STATE.md",
+      "role": "state",
+      "action": "write",
+      "before_hash": "6e22ca741ee76798",
+      "after_hash": "470beb1261441454",
+      "applied": true
+    }
+  ]
+}

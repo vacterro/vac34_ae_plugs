@@ -1,0 +1,43 @@
+{
+  "blocking_findings": {
+    "problem_count": 1,
+    "problems": [
+      {
+        "category": null,
+        "credential": false,
+        "detail": "converge clean-HUNT marker present but next_action names ADD -- under execution_intent: converge a clean HUNT MUST NOT enter ADD (CONVERGE.md stages F/I route it to CLEAN and the closure sequence; ADD",
+        "detail_hash": "de79d1b400a4817f",
+        "finding_key": "76b48f23558dce11",
+        "rule_id": "unclassified",
+        "severity": "problem",
+        "subject_id": null,
+        "subject_kind": "global",
+        "subject_ref": null
+      }
+    ],
+    "ruleset_fingerprint": "9a47d608ed3f3a833348aaeeca5cd9e9076f3bf53b1ef92b6ade46958e3e3fec",
+    "ruleset_version": 2,
+    "status": "complete",
+    "warning_count": 9
+  },
+  "board_hash": "911c7800242a251f",
+  "canonical_next_command": null,
+  "content_hash": "839397fd63efe271",
+  "exit_code": 1,
+  "external_actions": [],
+  "gate": "core",
+  "install_fingerprint": "install-v1:d70da088c9c58c415fbc8678598049a187735c135d7952d607dc739403eceeea",
+  "install_home": "C:\\ProgramData\\SAI\\SAIPEN\\runtime\\481789cd34cc6f29",
+  "kind": "conformance_receipt",
+  "log_hash": "7262787de1690bea",
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "receipt_id": "receipt-09e52c7c4056",
+  "remediation_commands": [],
+  "schema_version": 2,
+  "source_head": "no-git",
+  "source_tree_fingerprint": "no-git-tree-v1:18aebe3902db6cbd18e4a9aa49092948951d30395eee9e41f39fa75286324b2a",
+  "state_hash": "2abef3d7a1104ace",
+  "timestamp_utc": "2026-11-08T06:14:33.544542Z",
+  "validator_protocol_version": "1",
+  "verdict": "FAIL"
+}

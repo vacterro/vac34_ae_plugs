@@ -1,0 +1,78 @@
+{
+  "op_id": "finish-1b255cb8d9ab43ebaab2b4acd9522edf",
+  "operation": "finish",
+  "created_at": "2026-11-12T04:59:27Z",
+  "agent": "saipen",
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "project_lineage": "lineage-bd0fe1a39fe1441f88a83421ede30e5c",
+  "semantic_payload_hash": "938dd87cc0b6edb3",
+  "preconditions": {
+    ".saipen/STATE.md": "0abc8d5c9a54550a",
+    ".saipen/BOARD.md": "e5d51fbb591c5fb1",
+    ".saipen/LOG.md": "1d3e2c498d86fda9",
+    ".saipen/intake/contracts/SRC-007.json": "31cc1bf56b79ee46",
+    ".saipen/intake/coverage/SRC-007.json": "05f91c8e61028a81",
+    ".saipen/intake/contracts/SRC-007.r001.json": ""
+  },
+  "read_preconditions": {
+    ".saipen/logs": "tree-missing-v1",
+    ".saipen/intake/index.json": "fe07e853c612d7ac",
+    ".saipen/intake/active/SRC-007.meta.json": "8c264937d1593452",
+    ".saipen/intake/distribution/SRC-007.json": "file-missing-v1",
+    ".saipen/quarantine/source/SRC-007.md": "file-missing-v1",
+    ".saipen/intake/active/SRC-007.md": "15398498625a31f4"
+  },
+  "verification_policy": "core_fast",
+  "status": "COMMITTED",
+  "progress_index": 6,
+  "targets": [
+    {
+      "path": ".saipen/intake/contracts/SRC-007.json",
+      "role": "contract",
+      "action": "write",
+      "before_hash": "31cc1bf56b79ee46",
+      "after_hash": "4b23eb10e0629733",
+      "applied": true
+    },
+    {
+      "path": ".saipen/intake/contracts/SRC-007.r001.json",
+      "role": "contract_revision",
+      "action": "write",
+      "before_hash": "",
+      "after_hash": "4b23eb10e0629733",
+      "applied": true
+    },
+    {
+      "path": ".saipen/intake/coverage/SRC-007.json",
+      "role": "coverage",
+      "action": "write",
+      "before_hash": "05f91c8e61028a81",
+      "after_hash": "6be4dcc6e59575dd",
+      "applied": true
+    },
+    {
+      "path": ".saipen/LOG.md",
+      "role": "log",
+      "action": "write",
+      "before_hash": "1d3e2c498d86fda9",
+      "after_hash": "67b23f4539c89804",
+      "applied": true
+    },
+    {
+      "path": ".saipen/BOARD.md",
+      "role": "board",
+      "action": "write",
+      "before_hash": "e5d51fbb591c5fb1",
+      "after_hash": "768f5e6c2a94c820",
+      "applied": true
+    },
+    {
+      "path": ".saipen/STATE.md",
+      "role": "state",
+      "action": "write",
+      "before_hash": "0abc8d5c9a54550a",
+      "after_hash": "64fdc8d372212f36",
+      "applied": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "total_blocks": 740,
+  "counts": {
+    "READY_RECIPE": 368,
+    "MULTI_PROPERTY_RIG": 61,
+    "REQUIRES_PARAMETERIZATION": 134,
+    "HELPER_FUNCTION": 8,
+    "DUPLICATE_VARIANT": 23,
+    "INVALID_OR_UNSAFE": 6,
+    "DOCUMENTATION_ONLY": 139,
+    "NEEDS_HOST_VERIFICATION": 1
+  },
+  "hash_groups_count": 717
+}

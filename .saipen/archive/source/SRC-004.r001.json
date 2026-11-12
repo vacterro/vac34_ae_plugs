@@ -1,0 +1,264 @@
+{
+  "clauses": {
+    "SRC-004:R001": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Resolve selected Starglow Threshold."
+    },
+    "SRC-004:R002": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Store direct Property reference in `targetItem.prop`."
+    },
+    "SRC-004:R003": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Begin applying recipe."
+    },
+    "SRC-004:R004": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Create multiple Expression Controls on the target layer."
+    },
+    "SRC-004:R005": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Reuse the previously stored Property reference."
+    },
+    "SRC-004:R006": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Assign expression. This is unsafe in real After Effects. Adobe's PropertyGroup API documents that adding a property to an indexed group recreates the group and invalidates references to existing children. Starglow resides under the indexed Effects group. Adding Slider Controls to that same group can therefore invalidate the previously captured Starglow Threshold reference. The issue is not captured by current Node mocks because they retain object references across simulated addProperty calls."
+    },
+    "SRC-004:R007": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Reacquire the current Effects group."
+    },
+    "SRC-004:R008": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Resolve newly created controls."
+    },
+    "SRC-004:R009": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Remove only controls created by this transaction."
+    },
+    "SRC-004:R010": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Resolve reused controls."
+    },
+    "SRC-004:R011": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Restore previous values and expressions."
+    },
+    "SRC-004:R012": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Preserve foreign controls."
+    },
+    "SRC-004:R013": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Verify final state."
+    },
+    "SRC-004:R014": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Report rollback failures. When multiple effects are deleted, handle shifting indices safely. Do not suppress rollback errors and then report successful recovery."
+    },
+    "SRC-004:R015": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Read existing selected source identity."
+    },
+    "SRC-004:R016": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Rebuild available sources."
+    },
+    "SRC-004:R017": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Restore the matching source."
+    },
+    "SRC-004:R018": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "If it no longer exists, show a missing-source error."
+    },
+    "SRC-004:R019": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Never silently select a different audio source during Apply. Handle duplicate audio-layer names."
+    },
+    "SRC-004:R020": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Verify source release and manifest."
+    },
+    "SRC-004:R021": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Save a safe rollback copy."
+    },
+    "SRC-004:R022": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Use the authorized Windows elevation mechanism where required."
+    },
+    "SRC-004:R023": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Install the new JSX."
+    },
+    "SRC-004:R024": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Recalculate the real Live SHA-256."
+    },
+    "SRC-004:R025": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Update the backup mirror."
+    },
+    "SRC-004:R026": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Recalculate mirror SHA-256."
+    },
+    "SRC-004:R027": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Confirm all three match."
+    },
+    "SRC-004:R028": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Report whether AE needs restart."
+    },
+    "SRC-004:R029": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Execute host verification against the installed version. Never bypass UAC. Never forcibly close the user's After Effects session. Do not install a build that failed mandatory tests."
+    },
+    "SRC-004:R030": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Create a composition."
+    },
+    "SRC-004:R031": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Create an Adjustment Layer."
+    },
+    "SRC-004:R032": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Apply Starglow."
+    },
+    "SRC-004:R033": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Set Threshold to 262."
+    },
+    "SRC-004:R034": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Select the actual Threshold property."
+    },
+    "SRC-004:R035": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Prepare a valid Audio Amplitude source."
+    },
+    "SRC-004:R036": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Open vac34_AE."
+    },
+    "SRC-004:R037": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Select Audio Reactive Value Mapper."
+    },
+    "SRC-004:R038": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Set Target Mode to Selected Property."
+    },
+    "SRC-004:R039": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Configure an appropriate output range."
+    },
+    "SRC-004:R040": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Click Apply."
+    },
+    "SRC-004:R041": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Confirm the expression is attached to Starglow Threshold."
+    },
+    "SRC-004:R042": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Confirm it returns a scalar."
+    },
+    "SRC-004:R043": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Confirm no expression error."
+    },
+    "SRC-004:R044": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Confirm Threshold reacts to audio."
+    },
+    "SRC-004:R045": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Confirm updating sliders changes the actual behavior."
+    },
+    "SRC-004:R046": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Confirm Update works."
+    },
+    "SRC-004:R047": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Confirm Remove affects only the selected rig."
+    },
+    "SRC-004:R048": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Confirm Starglow itself remains intact."
+    },
+    "SRC-004:R049": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Confirm original property animation is preserved."
+    },
+    "SRC-004:R050": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Save and reopen the project."
+    },
+    "SRC-004:R051": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Confirm the rig still functions. Repeat with: - Two Starglow instances on one layer. - Two identically named layers. - Two different audio sources. - Existing foreign expression. - Existing different vac34 recipe. - Shared Master Controls. Do not take foreground control of the user's working desktop during default automated tests. Use a safe isolated session or explicit authorized interactive test mode. If a real AE test cannot run, mark HOST_UNVERIFIED with a concrete blocker."
+    }
+  },
+  "derived_at": "2026-11-07T18:16:03Z",
+  "derived_from": "SRC-004",
+  "interpretation_revision": 1,
+  "schema_version": 1,
+  "source_sha256": "ea789b3ee1819f6c5451ade46a29fed5d9325eccef019ea21e046119b042a97a"
+}

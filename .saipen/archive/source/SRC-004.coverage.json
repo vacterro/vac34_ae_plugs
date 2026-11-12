@@ -1,0 +1,464 @@
+{
+  "requirements": {
+    "SRC-004:R001": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Resolve selected Starglow Threshold.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R002": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Store direct Property reference in `targetItem.prop`.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R003": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Begin applying recipe.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R004": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Create multiple Expression Controls on the target layer.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R005": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Reuse the previously stored Property reference.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R006": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Assign expression. This is unsafe in real After Effects. Adobe's PropertyGroup API documents that adding a property to an indexed group recreates the group and invalidates references to existing children. Starglow resides under the indexed Effects group. Adding Slider Controls to that same group can therefore invalidate the previously captured Starglow Threshold reference. The issue is not captured by current Node mocks because they retain object references across simulated addProperty calls.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R007": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Reacquire the current Effects group.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R008": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Resolve newly created controls.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R009": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Remove only controls created by this transaction.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R010": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Resolve reused controls.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R011": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Restore previous values and expressions.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R012": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Preserve foreign controls.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R013": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Verify final state.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R014": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Report rollback failures. When multiple effects are deleted, handle shifting indices safely. Do not suppress rollback errors and then report successful recovery.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R015": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Read existing selected source identity.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R016": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Rebuild available sources.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R017": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Restore the matching source.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R018": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "If it no longer exists, show a missing-source error.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R019": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Never silently select a different audio source during Apply. Handle duplicate audio-layer names.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R020": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Verify source release and manifest.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R021": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Save a safe rollback copy.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R022": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Use the authorized Windows elevation mechanism where required.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R023": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Install the new JSX.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R024": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Recalculate the real Live SHA-256.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R025": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Update the backup mirror.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R026": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Recalculate mirror SHA-256.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R027": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Confirm all three match.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R028": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Report whether AE needs restart.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R029": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Execute host verification against the installed version. Never bypass UAC. Never forcibly close the user's After Effects session. Do not install a build that failed mandatory tests.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R030": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Create a composition.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R031": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Create an Adjustment Layer.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R032": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Apply Starglow.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R033": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Set Threshold to 262.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R034": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Select the actual Threshold property.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R035": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Prepare a valid Audio Amplitude source.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R036": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Open vac34_AE.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R037": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Select Audio Reactive Value Mapper.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R038": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Set Target Mode to Selected Property.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R039": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Configure an appropriate output range.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R040": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Click Apply.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R041": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Confirm the expression is attached to Starglow Threshold.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R042": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Confirm it returns a scalar.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R043": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Confirm no expression error.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R044": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Confirm Threshold reacts to audio.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R045": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Confirm updating sliders changes the actual behavior.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R046": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Confirm Update works.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R047": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Confirm Remove affects only the selected rig.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R048": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Confirm Starglow itself remains intact.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R049": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Confirm original property animation is preserved.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R050": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Save and reopen the project.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    },
+    "SRC-004:R051": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "T-4 verified in LOG E-36: pytest 78 passed",
+      "text": "Confirm the rig still functions. Repeat with: - Two Starglow instances on one layer. - Two identically named layers. - Two different audio sources. - Existing foreign expression. - Existing different vac34 recipe. - Shared Master Controls. Do not take foreground control of the user's working desktop during default automated tests. Use a safe isolated session or explicit authorized interactive test mode. If a real AE test cannot run, mark HOST_UNVERIFIED with a concrete blocker.",
+      "verification": "pytest 78 passed",
+      "work": "T-4"
+    }
+  },
+  "schema_version": 1
+}

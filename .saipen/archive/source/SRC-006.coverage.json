@@ -1,0 +1,14 @@
+{
+  "requirements": {
+    "SRC-006:R001": {
+      "actionable": true,
+      "class": "requirement",
+      "disposition": "VERIFIED",
+      "evidence": "board-verified on T-6: suite verdict PASS recorded by the declared suite, deployment verified by the pipeline install stage",
+      "text": "Scrollable fixed-footer panel, always-visible apply results, pinned composition and target, real audio source validation, partial-success reporting and automatic build identity",
+      "verification": "repository harness on the finished tree reported 109 passed, 0 red, covering the new T-6 acceptance regressions (scrollable fixed-footer panel, visible operation results, pinned composition and target, audio source states, partial-success reporting, build fingerprint identity, parameter validation, pinned update); the build and deploy pipeline reported the Live AE installation and the backup Mirror are byte-identical at release SHA-256 5262552f with the automatic build fingerprint matching the release manifest. HOST-VERIFY NOT RUN: no After Effects host session was driven, so no live-host verdict is claimed.",
+      "work": "T-6"
+    }
+  },
+  "schema_version": 1
+}

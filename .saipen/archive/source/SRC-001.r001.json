@@ -1,0 +1,289 @@
+{
+  "clauses": {
+    "SRC-001:R001": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Open After Effects."
+    },
+    "SRC-001:R002": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Open the vac34_AE panel."
+    },
+    "SRC-001:R003": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Select one or multiple layers."
+    },
+    "SRC-001:R004": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Search or choose an expression behavior."
+    },
+    "SRC-001:R005": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Adjust parameters using sliders, numeric inputs, dropdowns, toggles, colors, and other appropriate controls."
+    },
+    "SRC-001:R006": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Click Apply."
+    },
+    "SRC-001:R007": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Immediately receive the intended animation behavior."
+    },
+    "SRC-001:R008": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Adjust that behavior afterward without manually editing expression code."
+    },
+    "SRC-001:R009": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Combine compatible behaviors."
+    },
+    "SRC-001:R010": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Save reusable presets. The application must behave like a coherent tool, not a folder containing hundreds of scripts. You are authorized to create and modify files belonging to the new vac34_AE project, run non-invasive tests, build releases, and deploy owned artifacts to the identified After Effects 2024 installation and the requested backup mirror, provided permissions allow it. Do not modify unrelated projects, user compositions, third-party plugins, or existing application files. Do not invent success, skip required verification, or claim a feature works because its source code appears reasonable. Inspect the environment, create an implementation plan, execute it, test it, repair failures, and deliver a usable installation. Do not stop merely because a milestone or ticket is marked DONE. Continue toward the actual mission goal while authorized work remains. Never bypass actual permission restrictions, administrative controls, or safety boundaries. ---"
+    },
+    "SRC-001:R011": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "THE ULTIMATE AFTER EFFECTS EXPRESSIONS BIBLE \u2014 V3 ANNOTATED."
+    },
+    "SRC-001:R012": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "AE Expressions \u2014 Beat Sync Bible, extensive edition with advanced techniques and troubleshooting."
+    },
+    "SRC-001:R013": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "AE Expressions \u2014 Beat Sync Bible v2, annotated and reorganized edition. Treat these as the authoritative supplied source material for the first catalog-building campaign. They contain approximately 740 fenced code examples in total. Important: this does not mean 740 unique, valid, independent expressions. The sources include duplicates, overlapping implementations, explanatory snippets, incomplete workflows, conceptual recipes, and potentially incorrect expressions. If these documents are not present in the execution environment, search the accessible workspace and authorized provided attachments. Do not fabricate their contents. If unavailable, create a working starter catalog from independently verified implementations, record SOURCE_MISSING for the unattainable material, and clearly report that full Bible ingestion remains incomplete."
+    },
+    "SRC-001:R014": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Recipe definition."
+    },
+    "SRC-001:R015": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "UI presentation."
+    },
+    "SRC-001:R016": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Property compatibility."
+    },
+    "SRC-001:R017": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Controller creation."
+    },
+    "SRC-001:R018": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Expression output. This structure must support future additions without rewriting the entire panel. ---"
+    },
+    "SRC-001:R019": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Validate source tree."
+    },
+    "SRC-001:R020": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Validate catalog schema."
+    },
+    "SRC-001:R021": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Parse available source documents."
+    },
+    "SRC-001:R022": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Generate normalized catalog."
+    },
+    "SRC-001:R023": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Validate recipes."
+    },
+    "SRC-001:R024": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Detect duplicate IDs."
+    },
+    "SRC-001:R025": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Validate controller references."
+    },
+    "SRC-001:R026": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Generate expression templates."
+    },
+    "SRC-001:R027": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Assemble ExtendScript-compatible source."
+    },
+    "SRC-001:R028": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Validate generated syntax."
+    },
+    "SRC-001:R029": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Generate a versioned release."
+    },
+    "SRC-001:R030": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Produce checksums."
+    },
+    "SRC-001:R031": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Generate build manifest."
+    },
+    "SRC-001:R032": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Run available automated tests."
+    },
+    "SRC-001:R033": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Stage deployment artifacts."
+    },
+    "SRC-001:R034": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Deploy when all required gates pass."
+    },
+    "SRC-001:R035": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Synchronize the recovery mirror."
+    },
+    "SRC-001:R036": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Verify deployed files."
+    },
+    "SRC-001:R037": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Report status and evidence."
+    },
+    "SRC-001:R038": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "The project exists in the requested development root."
+    },
+    "SRC-001:R039": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "The architecture decision is documented."
+    },
+    "SRC-001:R040": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "A working dockable panel has been built."
+    },
+    "SRC-001:R041": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "The panel exposes actual configurable expression behaviors."
+    },
+    "SRC-001:R042": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Expression parameters can be adjusted through controls instead of routine manual code editing."
+    },
+    "SRC-001:R043": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Safe application and removal work."
+    },
+    "SRC-001:R044": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Existing unrelated expressions and animation are protected."
+    },
+    "SRC-001:R045": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Multi-layer application works."
+    },
+    "SRC-001:R046": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "The supported audio workflow works."
+    },
+    "SRC-001:R047": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "A usable recipe catalog exists."
+    },
+    "SRC-001:R048": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Source import and provenance are accounted for."
+    },
+    "SRC-001:R049": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Automated validation passes."
+    },
+    "SRC-001:R050": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Required available AE runtime tests pass."
+    },
+    "SRC-001:R051": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "The builder produces the release artifact."
+    },
+    "SRC-001:R052": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "The correct live AE installation location is identified."
+    },
+    "SRC-001:R053": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "The primary deployment succeeds, or a real deployment blocker is reported."
+    },
+    "SRC-001:R054": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "The recovery mirror is synchronized and verified, or a real blocker is reported."
+    },
+    "SRC-001:R055": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "Known limitations and unfinished source recipes are explicitly documented."
+    },
+    "SRC-001:R056": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "There are no known unresolved critical defects in the functionality claimed as completed. Do not report 100% catalog coverage simply because all source blocks were parsed. Do not report production-ready if the actual host UI has never been tested. Use explicit status categories: - VERIFIED - IMPLEMENTED_UNVERIFIED - PARTIAL - BLOCKED - FAILED ---"
+    }
+  },
+  "derived_at": "2026-11-07T11:56:27Z",
+  "derived_from": "SRC-001",
+  "interpretation_revision": 1,
+  "schema_version": 1,
+  "source_sha256": "459ae446f0340ff2b01fc4f5910b26c1d4568d4345555630c68bb0ce10fcbc49"
+}

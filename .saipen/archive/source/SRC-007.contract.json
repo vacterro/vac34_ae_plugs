@@ -1,0 +1,14 @@
+{
+  "clauses": {
+    "SRC-007:R001": {
+      "actionable": true,
+      "class": "requirement",
+      "text": "T-7: pinned target integrity, shared master lifecycle, ScriptUI acceptance, Glow Threshold P0 campaign per SAIHANDOFF"
+    }
+  },
+  "derived_at": "2026-11-12T04:59:27Z",
+  "derived_from": "SRC-007",
+  "interpretation_revision": 1,
+  "schema_version": 1,
+  "source_sha256": "15398498625a31f456b57db9e110776e0b47596f47b3273e204c91e7b5e3b997"
+}

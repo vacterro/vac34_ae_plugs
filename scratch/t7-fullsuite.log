@@ -1,0 +1,243 @@
+test_expression_generation_node_execution (integration.test_scenarios.TestAcceptanceScenarios.test_expression_generation_node_execution)
+Simulate expression evaluation in isolated Node.js context. ... ok
+test_scenario_l_build_and_mirror_integrity (integration.test_scenarios.TestAcceptanceScenarios.test_scenario_l_build_and_mirror_integrity)
+Scenario L — Build and Mirror byte-identical verification. ... FAIL
+test_scenario_provenance_and_quarantine (integration.test_scenarios.TestAcceptanceScenarios.test_scenario_provenance_and_quarantine)
+Verify that all 740 blocks are accounted for with provenance & quarantine. ... ok
+test_extendscript_compat_no_const_or_let (unit.test_catalog.TestCatalogAndMath.test_extendscript_compat_no_const_or_let)
+Ensure core UI code uses var rather than ES6 const/let for ExtendScript compatibility. ... ok
+test_math_clamp (unit.test_catalog.TestCatalogAndMath.test_math_clamp)
+Test clamping math. ... ok
+test_math_sine_breathing (unit.test_catalog.TestCatalogAndMath.test_math_sine_breathing)
+Test mathematical sine breathing range. ... ok
+test_math_squash_stretch_volume_preservation (unit.test_catalog.TestCatalogAndMath.test_math_squash_stretch_volume_preservation)
+Test that squash & stretch preserves 2D area (sx * sy == 1). ... ok
+test_recipe_file_exists (unit.test_catalog.TestCatalogAndMath.test_recipe_file_exists) ... ok
+test_recipe_ids_unique (unit.test_catalog.TestCatalogAndMath.test_recipe_ids_unique) ... ok
+test_01_rollback_preserving_reused_controllers (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_01_rollback_preserving_reused_controllers)
+1. Rollback preserving reused controllers. ... ok
+test_02_restoring_previously_changed_controller_values (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_02_restoring_previously_changed_controller_values)
+2. Restoring previously changed controller values on rollback. ... ok
+test_03_expression_failure_preserving_existing_effects (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_03_expression_failure_preserving_existing_effects)
+3. Expression failure preserving existing effects. ... ok
+test_04_strict_json_number_grammar (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_04_strict_json_number_grammar)
+4. Strict JSON number grammar (RFC 8259 conformance). ... ok
+test_05_strict_json_string_grammar (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_05_strict_json_string_grammar)
+5. Strict JSON string grammar, prototype pollution and duplicate key rejection. ... ok
+test_06_serializer_availability_without_native_json (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_06_serializer_availability_without_native_json)
+6. Serializer availability without native JSON in runtime. ... ok
+test_07_audio_names_with_special_characters (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_07_audio_names_with_special_characters)
+7. Audio layer and channel names with special characters. ... ok
+test_08_initial_ui_recipe_selection (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_08_initial_ui_recipe_selection)
+8. Initial UI recipe selection correctness. ... ok
+test_09_programmatic_preset_selection (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_09_programmatic_preset_selection)
+9. Programmatic preset selection and value restoration. ... ok
+test_10_shared_master_name_collisions (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_10_shared_master_name_collisions)
+10. Shared Master layer name collisions handled without hijacking foreign user layers. ... ok
+test_11_property_dimension_mismatch (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_11_property_dimension_mismatch)
+11. Property dimension mismatch rejection (1D, 2D, 3D, Color, Text, separated Position). ... ok
+test_12_actual_recipe_stacking_or_safe_rejection (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_12_actual_recipe_stacking_or_safe_rejection)
+12. Cross-recipe stacking safe conflict rejection. ... ok
+test_13_full_project_export_coverage (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_13_full_project_export_coverage)
+13. Full project export coverage verification. ... ok
+test_14_clean_zip_rebuild (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_14_clean_zip_rebuild)
+14. Clean ZIP export and rebuild verification. ... skipped 'Skipping nested export during export verification'
+test_15_build_manifest_verification (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_15_build_manifest_verification)
+15. Build manifest verification. ... ok
+test_16_correct_deployment_and_mirror_hashes (unit.test_forensic_release_integrity.TestForensicReleaseIntegrity.test_16_correct_deployment_and_mirror_hashes)
+16. Correct deployment and mirror byte-identical hashes. ... ok
+test_controller_creation_failure_rollback (unit.test_p0_hardening.TestP0Hardening.test_controller_creation_failure_rollback)
+Regression Test K: Failure during controller creation rolls back and aborts expression assignment. ... ok
+test_foreign_expression_preservation_mock (unit.test_p0_hardening.TestP0Hardening.test_foreign_expression_preservation_mock)
+Regression Test A: Verify that foreign expression is preserved byte-identical. ... ok
+test_p0_dockable_panel_startup_and_blank_panel_prevention (unit.test_p0_hardening.TestP0Hardening.test_p0_dockable_panel_startup_and_blank_panel_prevention)
+P0 Regression: Dockable panel startup, root layout execution, and blank panel prevention. ... ok
+test_p0_foreign_master_null_with_empty_comment_not_hijacked (unit.test_p0_hardening.TestP0Hardening.test_p0_foreign_master_null_with_empty_comment_not_hijacked)
+P0 Regression: User null named vac34_Master_Controls with empty comment is NOT hijacked or tagged. ... ok
+test_p0_setvalue_exception_triggers_transaction_rollback (unit.test_p0_hardening.TestP0Hardening.test_p0_setvalue_exception_triggers_transaction_rollback)
+P0 Regression: setValue() throwing exception rolls back transaction, reports exact controller, and aborts Apply. ... ok
+test_p0_shared_master_rollback_on_layer_failure (unit.test_p0_hardening.TestP0Hardening.test_p0_shared_master_rollback_on_layer_failure)
+P0 Regression: When Shared Master is prepared but all layer applications fail, master controls roll back and empty master null is cleaned up. ... ok
+test_p1_audio_escaping_quotes_and_special_chars (unit.test_p0_hardening.TestP0Hardening.test_p1_audio_escaping_quotes_and_special_chars)
+P1 Regression: Audio source and channel names with quotes, backslashes, and special characters generate valid JavaScript. ... ok
+test_p1_foreign_same_name_slider_not_reused_as_owned (unit.test_p0_hardening.TestP0Hardening.test_p1_foreign_same_name_slider_not_reused_as_owned)
+P1 Regression: Foreign Slider Control with matching name on layer is NOT hijacked or reused as owned. ... ok
+test_p1_project_save_reopen_rig_preservation (unit.test_p0_hardening.TestP0Hardening.test_p1_project_save_reopen_rig_preservation)
+P1 Regression: Project save/reopen preserves generated rigs via comment metadata. ... ok
+test_parse_json_strict_direct (unit.test_p0_hardening.TestP0Hardening.test_parse_json_strict_direct)
+Regression Test I: Verify pure-JS parseJSONStrict directly parses valid JSON and rejects invalid without eval. ... ok
+test_preset_safety_no_arbitrary_code_exec (unit.test_p0_hardening.TestP0Hardening.test_preset_safety_no_arbitrary_code_exec)
+Regression Test H: Ensure presets do not execute arbitrary JavaScript. ... ok
+test_recipe_conflict_prevention (unit.test_p0_hardening.TestP0Hardening.test_recipe_conflict_prevention)
+Regression Test J: Prevent cross-recipe conflict overwrite. ... ok
+test_undo_group_closed_on_exception (unit.test_p0_hardening.TestP0Hardening.test_undo_group_closed_on_exception)
+Regression Test B: Guaranteed Undo Group closure on exception. ... ok
+test_r10_floating_window_opens_correctly (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r10_floating_window_opens_correctly)
+R10: Floating Window opens correctly when thisObj is null/palette. ... ok
+test_r11_startup_exception_displayed_and_logged (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r11_startup_exception_displayed_and_logged)
+R11: Startup exception displays fallback UI and logs to writable location. ... ok
+test_r12_host_smoke_test_procedure_defined (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r12_host_smoke_test_procedure_defined)
+R12: Real host smoke-test procedure verifies controls. ... ok
+test_r13_several_installed_copies_discovered (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r13_several_installed_copies_discovered)
+R13: Multiple installed copies are discovered and reported via portable fixture. ... ok
+test_r14_build_identifier_displayed_in_title (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r14_build_identifier_displayed_in_title)
+R14: Actual build identifier is displayed in title. ... ok
+test_r15_install_and_rollback_preserve_foreign_files (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r15_install_and_rollback_preserve_foreign_files)
+R15: Install & rollback do not touch foreign files. ... ok
+test_r1_neither_live_nor_mirror_installed_fails (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r1_neither_live_nor_mirror_installed_fails)
+R1: Neither Live nor Mirror installed — deployment FAILED. ... ok
+test_r2_mirror_only_is_not_pass (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r2_mirror_only_is_not_pass)
+R2: Mirror exists, Live does not — PARTIAL/BLOCKED, not PASS. ... ok
+test_r3_all_three_hashes_match_verified (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r3_all_three_hashes_match_verified)
+R3: All three SHA-256 match — deployment VERIFIED. ... ok
+test_r3b_fake_hashes_match_flag_rejected (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r3b_fake_hashes_match_flag_rejected)
+P0: Verify that stage_verify_installation rejects fake hashes_match=True when files differ. ... ok
+test_r4_permission_denied_diagnosed_correctly (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r4_permission_denied_diagnosed_correctly)
+R4: Permission denied — diagnosed correctly without false green. ... ok
+test_r5_old_live_not_declared_updated (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r5_old_live_not_declared_updated)
+R5: Old Live not announced as updated when write fails. ... ok
+test_r6_missing_v_drive_skipped_in_portable (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r6_missing_v_drive_skipped_in_portable)
+R6: Absence of V: does not fail portable unit tests. ... ok
+test_r7_export_reproducible_without_deployment (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r7_export_reproducible_without_deployment)
+R7: Export reproducible without active live deployment. ... ok
+test_r8_clean_rebuild_canonical_identical_sha256 (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r8_clean_rebuild_canonical_identical_sha256)
+R8: Clean rebuild produces canonically identical artifact. ... ok
+test_r9_docked_panel_initial_layout_invoked (unit.test_regression_r1_r15.TestRegressionR1ToR15.test_r9_docked_panel_initial_layout_invoked)
+R9: Docked panel initial layout is invoked. ... ok
+test_r33_addproperty_invalidates_effect_property_references (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r33_addproperty_invalidates_effect_property_references)
+R33: addProperty invalidates previously selected effect Property references. ... ok
+test_r34_target_reacquired_after_controller_insertions (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r34_target_reacquired_after_controller_insertions)
+R34: Target references are reacquired correctly after multiple controller insertions. ... ok
+test_r35_rollback_cleans_controls_when_references_invalid (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r35_rollback_cleans_controls_when_references_invalid)
+R35: Rollback cleans up controls when their original references are invalid. ... ok
+test_r37_cross_recipe_overwrite_prevented (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r37_cross_recipe_overwrite_prevented)
+R37: Other vac34 recipes cannot be overwritten silently. ... ok
+test_r38_two_identical_starglow_names_remain_distinct_targets (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r38_two_identical_starglow_names_remain_distinct_targets)
+R38: Two identical Starglow names on one layer remain distinct targets. ... ok
+test_r39_identically_named_properties_on_different_layers_distinct (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r39_identically_named_properties_on_different_layers_distinct)
+R39: Identically named properties on two different layers remain distinct. ... ok
+test_r40_comp_and_layer_selected_properties_deduplicated (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r40_comp_and_layer_selected_properties_deduplicated)
+R40: CompItem and Layer selectedProperties do not double-count the same instance. ... ok
+test_r41_remove_selected_property_affects_only_selected_instance (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r41_remove_selected_property_affects_only_selected_instance)
+R41: Remove Selected Property affects only one instance. ... ok
+test_r43_audio_source_b_remains_selected (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r43_audio_source_b_remains_selected)
+R43: Audio Source B remains selected when Apply is clicked. ... ok
+test_r45_scalar_expression_returns_scalar_not_array (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r45_scalar_expression_returns_scalar_not_array)
+R45: Scalar expression returns one number, not a 2D array. ... ok
+test_r48_expression_error_after_assignment_detected (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r48_expression_error_after_assignment_detected)
+R48: expressionError after assignment is detected and handled. ... ok
+test_r52_real_live_and_mirror_hashes (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r52_real_live_and_mirror_hashes)
+R52: Mirror matches expected release hash (WINDOWS_DEPLOYMENT tier). ... ok
+test_r52b_portable_hashing_uses_temporary_fixtures (unit.test_regression_r33_r53.TestRegressionR33ToR53.test_r52b_portable_hashing_uses_temporary_fixtures)
+R52 portable tier (R100): hash algorithm verified on temp fixtures only. ... ok
+test_r54_failed_same_recipe_reapply_restores_original_expression (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r54_failed_same_recipe_reapply_restores_original_expression) ... ok
+test_r55_failure_after_assignment_restores_expression_enabled (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r55_failure_after_assignment_restores_expression_enabled) ... ok
+test_r56_fresh_apply_failure_leaves_expression_empty (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r56_fresh_apply_failure_leaves_expression_empty) ... ok
+test_r57_duplicate_starglow_with_invalid_index_never_cross_targets (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r57_duplicate_starglow_with_invalid_index_never_cross_targets) ... ok
+test_r58_ambiguous_property_identity_safe_rejection (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r58_ambiguous_property_identity_safe_rejection) ... ok
+test_r59_reacquire_null_cannot_lead_to_stale_mutation (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r59_reacquire_null_cannot_lead_to_stale_mutation) ... ok
+test_r60_universal_recipe_targetdimensions_zero_accepts_scalar (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r60_universal_recipe_targetdimensions_zero_accepts_scalar) ... ok
+test_r61_universal_recipe_rejects_unsupported_types (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r61_universal_recipe_rejects_unsupported_types) ... ok
+test_r62_existing_controller_expression_restored_after_rollback (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r62_existing_controller_expression_restored_after_rollback) ... ok
+test_r63_rollback_failure_not_reported_as_clean_success (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r63_rollback_failure_not_reported_as_clean_success) ... ok
+test_r64_duplicate_audio_layer_names_no_redirect (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r64_duplicate_audio_layer_names_no_redirect) ... ok
+test_r65_update_preserves_selected_audio_identity (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r65_update_preserves_selected_audio_identity) ... ok
+test_r66_comp_save_reopen_preserves_rig (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r66_comp_save_reopen_preserves_rig) ... ok
+test_r67_no_duplicate_controllers_after_repeated_apply (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r67_no_duplicate_controllers_after_repeated_apply) ... ok
+test_r68_keyframes_preserved_after_failed_and_successful_operations (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r68_keyframes_preserved_after_failed_and_successful_operations) ... ok
+test_r69_multiple_selected_properties_no_identity_confusion (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r69_multiple_selected_properties_no_identity_confusion) ... ok
+test_r70_host_expressionerror_complete_rollback (unit.test_regression_r54_r70.TestRegressionR54ToR70.test_r70_host_expressionerror_complete_rollback) ... ok
+test_r71_mode_rendered_as_dropdown_with_labels (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r71_mode_rendered_as_dropdown_with_labels) ... ok
+test_r72_fixed_chrome_and_scroll_range (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r72_fixed_chrome_and_scroll_range) ... ok
+test_r73_unexpected_handler_exception_is_visible (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r73_unexpected_handler_exception_is_visible) ... ok
+test_r74_pinned_composition_survives_focus_change (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r74_pinned_composition_survives_focus_change) ... ok
+test_r74b_ui_shows_pinned_comp_marker (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r74b_ui_shows_pinned_comp_marker) ... ok
+test_r75_pinned_target_reacquired_after_addproperty (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r75_pinned_target_reacquired_after_addproperty) ... ok
+test_r76_duplicate_effect_rejected_by_pin_resolution (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r76_duplicate_effect_rejected_by_pin_resolution) ... ok
+test_r77_audio_status_states (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r77_audio_status_states) ... ok
+test_r78_partial_batch_status (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r78_partial_batch_status) ... ok
+test_r79_pinned_apply_and_remove (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r79_pinned_apply_and_remove) ... ok
+test_r80_no_fake_audio_selection (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r80_no_fake_audio_selection) ... ok
+test_r81_build_fingerprint_stable_and_manifest_consistent (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r81_build_fingerprint_stable_and_manifest_consistent) ... ok
+test_r82_parameter_validation_before_apply (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r82_parameter_validation_before_apply) ... ok
+test_r83_pinned_update_not_silent_noop (unit.test_regression_r71_r82.TestRegressionR71ToR82.test_r83_pinned_update_not_silent_noop) ... ok
+test_r100_portable_tests_never_require_personal_windows_paths (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r100_portable_tests_never_require_personal_windows_paths)
+R100: any personal-drive/deployment path in the portable suite is gated. ... ok
+test_r101_clean_archive_rebuild_independent_of_live_deployment (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r101_clean_archive_rebuild_independent_of_live_deployment)
+R101: clean ZIP rebuild must not depend on the live deployment env. ... skipped 'Skipping nested export during export verification'
+test_r102_real_windows_deployment_hashes (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r102_real_windows_deployment_hashes)
+R102 (gated): real Live/Mirror hashes via scripts/manage.py verify. ... skipped 'NOT_RUN: R102 requires opt-in deployment check on this Windows machine (VAC34_DEPLOYMENT_CHECK=1 python scripts/manage.py verify).'
+test_r103_no_false_success_for_unsupported_pinned_recipe (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r103_no_false_success_for_unsupported_pinned_recipe)
+R103: an unsupported pinned recipe never reports ok/APPLIED. ... ok
+test_r104_glow_threshold_audio_mapping_real_ae (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r104_glow_threshold_audio_mapping_real_ae) ... skipped 'NOT_RUN: R104 requires After Effects 2024 (Glow Threshold reactivity). Run tests/ae_runtime/host_smoke_test.jsx in the AE host (Wave H).'
+test_r105_shared_master_rig_survives_save_reopen (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r105_shared_master_rig_survives_save_reopen) ... skipped 'NOT_RUN: R105 requires real project save/reopen in After Effects 2024.'
+test_r83_pinned_rejects_2d_recipe_on_1d_threshold (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r83_pinned_rejects_2d_recipe_on_1d_threshold) ... ok
+test_r84_pinned_does_not_bypass_cansetexpression (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r84_pinned_does_not_bypass_cansetexpression) ... ok
+test_r85_pinned_applies_correct_scalar_recipe (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r85_pinned_applies_correct_scalar_recipe) ... ok
+test_r86_pinned_rejects_unsupported_propertyvaluetype (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r86_pinned_rejects_unsupported_propertyvaluetype) ... ok
+test_r87_pinned_master_update_changes_master_controls_only (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r87_pinned_master_update_changes_master_controls_only) ... ok
+test_r88_pinned_perlayer_update_changes_targetlayer_controls_only (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r88_pinned_perlayer_update_changes_targetlayer_controls_only) ... ok
+test_r89_update_no_false_success_on_wrong_owner (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r89_update_no_false_success_on_wrong_owner) ... ok
+test_r90_pinned_remove_cleans_unreferenced_controls (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r90_pinned_remove_cleans_unreferenced_controls) ... ok
+test_r91_pinned_remove_preserves_shared_controls_with_consumers (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r91_pinned_remove_preserves_shared_controls_with_consumers) ... ok
+test_r92_remove_never_deletes_unrelated_effects (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r92_remove_never_deletes_unrelated_effects) ... ok
+test_r93_repeated_apply_remove_no_orphan_accumulation (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r93_repeated_apply_remove_no_orphan_accumulation) ... ok
+test_r94_narrow_panel_action_buttons (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r94_narrow_panel_action_buttons) ... ok
+test_r95_real_ae_scroll_viewport (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r95_real_ae_scroll_viewport) ... skipped 'NOT_RUN: R95 requires a real After Effects 2024 docked ScriptUI viewport to prove clipping/scrolling (Wave D host geometry).'
+test_r96_recipe_change_recomputes_scroll_geometry (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r96_recipe_change_recomputes_scroll_geometry) ... ok
+test_r97_audio_source_identity_survives_refresh (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r97_audio_source_identity_survives_refresh) ... ok
+test_r98_duplicate_audio_names_never_silently_relink (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r98_duplicate_audio_names_never_silently_relink) ... ok
+test_r99_focus_change_does_not_retarget_pinned_property (unit.test_regression_r83_r105.TestRegressionR83ToR105.test_r99_focus_change_does_not_retarget_pinned_property) ... ok
+test_01_starglow_threshold_detected (unit.test_universal_targeting_and_audio.TestUniversalTargetingAndAudio.test_01_starglow_threshold_detected)
+1. Selected Starglow Threshold detected. ... ok
+test_02_property_value_type_oned_detected (unit.test_universal_targeting_and_audio.TestUniversalTargetingAndAudio.test_02_property_value_type_oned_detected)
+2. PropertyValueType.OneD detected. ... ok
+test_03_audio_scale_pump_default_target_is_scale (unit.test_universal_targeting_and_audio.TestUniversalTargetingAndAudio.test_03_audio_scale_pump_default_target_is_scale)
+3. Audio Scale Pump default target remains Transform.Scale. ... ok
+test_04_selected_property_mode_rejects_incompatible_scale_recipe (unit.test_universal_targeting_and_audio.TestUniversalTargetingAndAudio.test_04_selected_property_mode_rejects_incompatible_scale_recipe)
+4. Explicit Selected Property mode rejects incompatible Scale recipe on 1D property. ... ok
+test_05_audio_reactive_value_mapper_applies_to_threshold (unit.test_universal_targeting_and_audio.TestUniversalTargetingAndAudio.test_05_audio_reactive_value_mapper_applies_to_threshold)
+5. Audio Reactive Value Mapper applies to selected Threshold. ... ok
+test_06_original_threshold_preserved_in_additive_mode (unit.test_universal_targeting_and_audio.TestUniversalTargetingAndAudio.test_06_original_threshold_preserved_in_additive_mode)
+6. Original Threshold value preserved in additive mode. ... ok
+test_07_audio_missing_causes_actionable_failure (unit.test_universal_targeting_and_audio.TestUniversalTargetingAndAudio.test_07_audio_missing_causes_actionable_failure)
+7. Audio missing causes actionable failure without false green. ... ok
+test_08_audio_channel_missing_causes_failure (unit.test_universal_targeting_and_audio.TestUniversalTargetingAndAudio.test_08_audio_channel_missing_causes_failure)
+8. Audio exists but selected channel missing causes failure. ... ok
+test_09_two_effects_with_identical_property_names (unit.test_universal_targeting_and_audio.TestUniversalTargetingAndAudio.test_09_two_effects_with_identical_property_names)
+9. Two effects with identical property names target the correct selected instance. ... ok
+test_10_foreign_expressions_remain_untouched (unit.test_universal_targeting_and_audio.TestUniversalTargetingAndAudio.test_10_foreign_expressions_remain_untouched)
+10. Foreign expressions remain untouched on selected effect properties. ... ok
+test_14_remove_preserves_starglow_itself (unit.test_universal_targeting_and_audio.TestUniversalTargetingAndAudio.test_14_remove_preserves_starglow_itself)
+14. Remove clears expression and preserves Starglow itself and unrelated effects. ... ok
+test_17_correct_target_preview_shown (unit.test_universal_targeting_and_audio.TestUniversalTargetingAndAudio.test_17_correct_target_preview_shown)
+17. Correct target preview shown before Apply. ... ok
+
+======================================================================
+FAIL: test_scenario_l_build_and_mirror_integrity (integration.test_scenarios.TestAcceptanceScenarios.test_scenario_l_build_and_mirror_integrity)
+Scenario L — Build and Mirror byte-identical verification.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "V:\___VAC\__K\__CODE\_PLUG_SCRIPT\vac34_ae_plugs\tests\integration\test_scenarios.py", line 37, in test_scenario_l_build_and_mirror_integrity
+    self.assertEqual(manifest["sha256"], deploy["live_sha256"])
+AssertionError: 'ab902ecf099a7b4810bd58ef226ae93d8d7f66f1aa15d04a56520ea753ecf91a' != '5262552ffb5de48642a556063e8d8c5bfc83fd1577e5b3d40a7bca388d3bfbf6'
+- ab902ecf099a7b4810bd58ef226ae93d8d7f66f1aa15d04a56520ea753ecf91a
++ 5262552ffb5de48642a556063e8d8c5bfc83fd1577e5b3d40a7bca388d3bfbf6
+
+
+----------------------------------------------------------------------
+Ran 133 tests in 6.203s
+
+FAILED (failures=1, skipped=6)
+[7/8] Verifying deployed files...
+[7/8] Verifying deployed files...
+  [DEPLOY_BLOCKED] Live AE installation failed: Permission denied
+  Execute elevated install: run scripts/install_admin.cmd or run 'python scripts/manage.py repair-mirror' as Administrator.
+[7/8] Verifying deployed files...
+[7/8] Verifying deployed files...
+  [PASS] Filesystem verification PASSED: Live (3957fdc4...) and Mirror (3957fdc4...) match release SHA-256.
+[7/8] Verifying deployed files...
+[2/8] Assembling ExtendScript modular bundle...
+  BUILD_ID: 0.0.1+ef015939701f
+[2/8] Assembling ExtendScript modular bundle...
+  BUILD_ID: 0.0.1+ef015939701f

@@ -1,0 +1,24 @@
+{
+  "state": "LIVE_AND_MIRROR_VERIFIED",
+  "live_installed": true,
+  "mirror_installed": true,
+  "hashes_match": true,
+  "live_path": "C:\\Program Files\\Adobe\\Adobe After Effects 2024\\Support Files\\Scripts\\ScriptUI Panels\\vac34_AE.jsx",
+  "mirror_path": "V:\\__STORE_V\\_AE\\install_AEPlugins\\_install_healing\\Program Files\\Adobe\\Adobe After Effects 2024\\Support Files\\Scripts\\ScriptUI Panels\\vac34_AE.jsx",
+  "live_sha256": "5262552ffb5de48642a556063e8d8c5bfc83fd1577e5b3d40a7bca388d3bfbf6",
+  "mirror_sha256": "5262552ffb5de48642a556063e8d8c5bfc83fd1577e5b3d40a7bca388d3bfbf6",
+  "live_error": null,
+  "mirror_error": null,
+  "installed_instances": [
+    {
+      "path": "C:\\Program Files\\Adobe\\Adobe After Effects 2024\\Support Files\\Scripts\\ScriptUI Panels\\vac34_AE.jsx",
+      "sha256": "5262552ffb5de48642a556063e8d8c5bfc83fd1577e5b3d40a7bca388d3bfbf6",
+      "size": 259574
+    },
+    {
+      "path": "V:\\__STORE_V\\_AE\\install_AEPlugins\\_install_healing\\Program Files\\Adobe\\Adobe After Effects 2024\\Support Files\\Scripts\\ScriptUI Panels\\vac34_AE.jsx",
+      "sha256": "5262552ffb5de48642a556063e8d8c5bfc83fd1577e5b3d40a7bca388d3bfbf6",
+      "size": 259574
+    }
+  ]
+}

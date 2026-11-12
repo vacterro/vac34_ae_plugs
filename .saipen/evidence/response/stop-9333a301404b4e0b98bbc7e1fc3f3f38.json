@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "reason": "STOP_HANDBACK",
+  "facts": {
+    "phase": "DONE",
+    "task": "none",
+    "next_action": "saipen continue",
+    "blocker": "none",
+    "agent": "saipen",
+    "saipen_version": 8,
+    "schema_version": 3,
+    "style_contract": "ded-069a4c52",
+    "saipen_home": "C:/ProgramData/SAI/SAIPEN/runtime/481789cd34cc6f29",
+    "mode": "full",
+    "transition_from": "SHIP",
+    "updated": "2026-11-07T14:38:50Z",
+    "last_event": 31,
+    "execution_intent": "converge",
+    "converge_target": "done",
+    "validation": "STALE_PASS",
+    "completed": [
+      "T-3"
+    ],
+    "automation": {},
+    "operator_due": false,
+    "blockers": [],
+    "evidence": [],
+    "suite_groups": [],
+    "detail_refs": [
+      "E-025",
+      "E-029"
+    ],
+    "test_groups": [],
+    "response_reason": "stop",
+    "operator_action": "NONE"
+  },
+  "delivery": "STATUS: DONE  \nRESULT: Peatatud operaatori soovil; T-3 lõpetatud  \nNEXT EXACT ACTION: saipen continue  \nVALIDATION: STALE_PASS  \nDETAILS: E-025, E-029",
+  "event": 31
+}

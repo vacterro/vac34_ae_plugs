@@ -1,0 +1,38 @@
+{
+  "op_id": "rebind_home-3a73f55102ba4f1ba55206d8d5995d79",
+  "operation": "rebind_home",
+  "created_at": "2026-11-11T23:26:08Z",
+  "agent": "saipen",
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "project_lineage": "lineage-bd0fe1a39fe1441f88a83421ede30e5c",
+  "semantic_payload_hash": "006e04e385ce6478",
+  "preconditions": {
+    ".saipen/STATE.md": "f1c9fd5348ce4170",
+    ".saipen/LOG.md": "1b9ad5dda814dfe7"
+  },
+  "read_preconditions": {
+    ".saipen/BOARD.md": "d7d46850108be1fd",
+    ".saipen/logs": "tree-missing-v1"
+  },
+  "verification_policy": "core_fast",
+  "status": "COMMITTED",
+  "progress_index": 2,
+  "targets": [
+    {
+      "path": ".saipen/LOG.md",
+      "role": "log",
+      "action": "write",
+      "before_hash": "1b9ad5dda814dfe7",
+      "after_hash": "7a5a01b4bbc79c78",
+      "applied": true
+    },
+    {
+      "path": ".saipen/STATE.md",
+      "role": "state",
+      "action": "write",
+      "before_hash": "f1c9fd5348ce4170",
+      "after_hash": "6a054cb6187a1ea9",
+      "applied": true
+    }
+  ]
+}
