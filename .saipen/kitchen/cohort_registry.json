@@ -1,0 +1,28 @@
+{
+  "cohorts": {
+    "C-7": {
+      "cohort_id": "C-7",
+      "commit": "",
+      "members": {
+        "T-7": {
+          "closed_at": "2026-11-12T07:02:55Z",
+          "closed_by": "saipen",
+          "paths": {
+            "dist/vac34_AE.jsx": "e3e50ec904e2aa9c"
+          },
+          "ticket_id": "T-7",
+          "verification": "the requested change is present and demonstrated against the user own description of it"
+        }
+      },
+      "publication_status": "pending",
+      "release_op_id": "",
+      "schema_version": 1,
+      "scope": [
+        "dist/vac34_AE.jsx"
+      ],
+      "tag": "",
+      "version": ""
+    }
+  },
+  "schema_version": 1
+}

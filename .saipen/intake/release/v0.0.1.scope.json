@@ -1,0 +1,19 @@
+{
+  "version": "v0.0.1",
+  "git_ref": "b5be542e3b652c475328314a7c023d863e7530d3",
+  "tag": "v0.0.1",
+  "release_url": "https://github.com/vacterro/vac34_ae_plugs/releases/tag/v0.0.1",
+  "artifacts": [
+    {
+      "path": "dist/vac34_AE.jsx",
+      "sha256": "e3e50ec904e2aa9c5293873c70e03f3ac82b4b84da1dfa74d1a6a79d085809bd"
+    },
+    {
+      "path": "release/vac34_AE_v0.0.1.jsx",
+      "sha256": "e3e50ec904e2aa9c5293873c70e03f3ac82b4b84da1dfa74d1a6a79d085809bd"
+    }
+  ],
+  "tickets": ["T-7", "T-6", "T-5", "T-4", "T-3", "T-2", "T-1"],
+  "timestamp": "2026-11-12T06:52:00Z",
+  "owner": "saipen"
+}

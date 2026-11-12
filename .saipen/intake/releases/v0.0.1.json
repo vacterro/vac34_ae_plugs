@@ -1,0 +1,12 @@
+{
+  "kind": "release",
+  "version": "v0.0.1",
+  "git_commit": "b5be542e3b652c475328314a7c023d863e7530d3",
+  "git_ref": "main",
+  "tag": "v0.0.1",
+  "release_url": "https://github.com/vacterro/vac34_ae_plugs/releases/tag/v0.0.1",
+  "sha256": "e3e50ec904e2aa9c5293873c70e03f3ac82b4b84da1dfa74d1a6a79d085809bd",
+  "tickets": ["T-1", "T-2", "T-3", "T-4", "T-5", "T-6", "T-7"],
+  "published_at": "2026-11-12T06:52:00Z",
+  "publisher": "saipen"
+}

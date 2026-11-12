@@ -1,0 +1,43 @@
+{
+  "blocking_findings": {
+    "problem_count": 1,
+    "problems": [
+      {
+        "category": null,
+        "credential": false,
+        "detail": "phase: DONE, empty ## TODO, but next_action='WAIT: first-publish -- confirm vac34_AE v0.0.1 publication to github.com/vacterro/vac34_ae_plugs' -- RFC \u00a7 2.1 says bare command + empty board MUST auto-tr",
+        "detail_hash": "150f17ec688aa796",
+        "finding_key": "76b48f23558dce11",
+        "rule_id": "unclassified",
+        "severity": "problem",
+        "subject_id": null,
+        "subject_kind": "global",
+        "subject_ref": null
+      }
+    ],
+    "ruleset_fingerprint": "9a47d608ed3f3a833348aaeeca5cd9e9076f3bf53b1ef92b6ade46958e3e3fec",
+    "ruleset_version": 2,
+    "status": "complete",
+    "warning_count": 11
+  },
+  "board_hash": "aedd914ad56c88f4",
+  "canonical_next_command": null,
+  "content_hash": "458f56fde7a75e06",
+  "exit_code": 1,
+  "external_actions": [],
+  "gate": "core",
+  "install_fingerprint": "install-v1:151cc1248cfe39d64716fe8c308e632f89b49166f65189910606373eeebd37ea",
+  "install_home": "V:\\___VAC\\__K\\__CODE\\_AI_STUFF_AGENTIC\\_SAIPEN",
+  "kind": "conformance_receipt",
+  "log_hash": "d07694e241d0ded3",
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "receipt_id": "receipt-b78853507228",
+  "remediation_commands": [],
+  "schema_version": 2,
+  "source_head": "b5be542e3b652c475328314a7c023d863e7530d3",
+  "source_tree_fingerprint": "git-delta-v1:f3b997246db4823f79fdd3fe5059ecfbbcac6e7b20eaaf633270e5618166aadf",
+  "state_hash": "1b88f72b8c980297",
+  "timestamp_utc": "2026-11-12T06:45:23.113825Z",
+  "validator_protocol_version": "1",
+  "verdict": "FAIL"
+}

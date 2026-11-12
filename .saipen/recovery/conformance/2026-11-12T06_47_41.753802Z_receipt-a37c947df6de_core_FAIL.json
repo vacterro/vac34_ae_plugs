@@ -1,0 +1,43 @@
+{
+  "blocking_findings": {
+    "problem_count": 1,
+    "problems": [
+      {
+        "category": null,
+        "credential": false,
+        "detail": "BOARD.md: T-8 has no [T-###] allocation event in the complete history (CORE-003 / SRC-026:R003)",
+        "detail_hash": "3fe32946441088f7",
+        "finding_key": "76b48f23558dce11",
+        "rule_id": "unclassified",
+        "severity": "problem",
+        "subject_id": null,
+        "subject_kind": "global",
+        "subject_ref": null
+      }
+    ],
+    "ruleset_fingerprint": "9a47d608ed3f3a833348aaeeca5cd9e9076f3bf53b1ef92b6ade46958e3e3fec",
+    "ruleset_version": 2,
+    "status": "complete",
+    "warning_count": 11
+  },
+  "board_hash": "aedd914ad56c88f4",
+  "canonical_next_command": null,
+  "content_hash": "305c54f245c7f42b",
+  "exit_code": 1,
+  "external_actions": [],
+  "gate": "core",
+  "install_fingerprint": "install-v1:151cc1248cfe39d64716fe8c308e632f89b49166f65189910606373eeebd37ea",
+  "install_home": "V:\\___VAC\\__K\\__CODE\\_AI_STUFF_AGENTIC\\_SAIPEN",
+  "kind": "conformance_receipt",
+  "log_hash": "a3a97dc5f8b09324",
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "receipt_id": "receipt-a37c947df6de",
+  "remediation_commands": [],
+  "schema_version": 2,
+  "source_head": "b5be542e3b652c475328314a7c023d863e7530d3",
+  "source_tree_fingerprint": "git-delta-v1:f3b997246db4823f79fdd3fe5059ecfbbcac6e7b20eaaf633270e5618166aadf",
+  "state_hash": "0ff426a7916de37b",
+  "timestamp_utc": "2026-11-12T06:47:41.753802Z",
+  "validator_protocol_version": "1",
+  "verdict": "FAIL"
+}

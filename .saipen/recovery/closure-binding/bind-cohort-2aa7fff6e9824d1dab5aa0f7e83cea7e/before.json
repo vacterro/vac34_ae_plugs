@@ -1,0 +1,10 @@
+{
+  "cohort": "C-7",
+  "original_finish": "finish-1b255cb8d9ab43ebaab2b4acd9522edf",
+  "original_finish_event": 86,
+  "original_row": "- [x] T-7 [P2] T-7: pinned target integrity, shared master lifecycle, ScriptUI acceptance, Glow Threshold P0 campaign per SAIHANDOFF | verify: the requested change is present and demonstrated against the user own description of it | request_witness: model_supplied | source_receipts: SRC-007 | owner: saipen | claim_time: 2026-11-12T04:58:21Z | closure_mode: own_patch | publication_state: pending",
+  "paths": {
+    "dist/vac34_AE.jsx": "e3e50ec904e2aa9c"
+  },
+  "ticket": "T-7"
+}

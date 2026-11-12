@@ -1,8 +1,9 @@
 # vac34_AE — Master Expressions Studio
 
-**Version:** 0.0.1  
-**Target Host:** Adobe After Effects 2024 (24.x, Windows 10 x64)  
-**Status:** MOCK_VERIFIED / BUILD_PASS / DEPLOY_PASS (Mirror Verified) / HOST_UNVERIFIED (Active User Desktop Session Protected)  
+**v0.0.1**
+
+**Target Host:** Adobe After Effects 2024 (24.x, Windows 10 x64)
+**Status:** MOCK_VERIFIED / BUILD_PASS / DEPLOY_PASS (Mirror Verified) / HOST_UNVERIFIED (Active User Desktop Session Protected)
 
 Unified dockable After Effects expression-control studio. Eliminates repetitive manual expression editing by providing an intuitive, parameter-driven workflow with native Expression Controls, audio reactivity, and preset management.
 
@@ -44,7 +45,12 @@ vac34_ae_plugs/
 ├── tests/                # Automated unit & integration acceptance tests
 ├── docs/                 # Architecture, user manual & deployment documentation
 ├── dist/                 # Deployed panel artifact (vac34_AE.jsx)
-└── release/              # Versioned release packages (vac34_AE_v0.0.1.jsx)
+├── README.md              # This file
+├── README.ee.md           # Estonian translation
+├── README.ded.md          # Dutch translation
+├── README.ja.md           # Japanese translation
+├── CHANGELOG.md           # Version history
+└── release/              # Versioned release packages
 ```
 
 ---
