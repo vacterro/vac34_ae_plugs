@@ -1,7 +1,7 @@
 {
   "kind": "release",
   "version": "v0.0.1",
-  "git_commit": "b5be542e3b652c475328314a7c023d863e7530d3",
+  "git_commit": "c0c376dfb746d6ac82bdd75f22e3c03758ecf269",
   "git_ref": "main",
   "tag": "v0.0.1",
   "release_url": "https://github.com/vacterro/vac34_ae_plugs/releases/tag/v0.0.1",
