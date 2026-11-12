@@ -1,0 +1,30 @@
+{
+  "op_id": "reverify.234bb9de898e",
+  "operation": "reverify.work",
+  "created_at": "2026-11-12T07:08:39Z",
+  "agent": "saipen",
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "project_lineage": "lineage-bd0fe1a39fe1441f88a83421ede30e5c",
+  "semantic_payload_hash": "0410f6c42f1e443d",
+  "preconditions": {
+    ".saipen/recovery/conformance/reverify/RV-000003.json": ""
+  },
+  "read_preconditions": {},
+  "verification_policy": "none",
+  "status": "COMMITTED",
+  "progress_index": 1,
+  "targets": [
+    {
+      "path": ".saipen/recovery/conformance/reverify/RV-000003.json",
+      "role": "report",
+      "action": "write",
+      "before_hash": "",
+      "after_hash": "8dc37632b2a40383",
+      "applied": true
+    }
+  ],
+  "receipt_metadata": {
+    "closed_contract": false,
+    "work": "T-3"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "agent": "saipen",
+  "created_at": "2026-11-12T07:08:27Z",
+  "evidence_class": "attested",
+  "findings_digest": "bd24195707716fd285697879eecce6be9e09eda76703d9831510a61e49f80bd1",
+  "gate": "core",
+  "integrity_digest": "9dfce6991c5945dd",
+  "journal_op_id": "reverify.6cf6f585da5c",
+  "original_closure": {
+    "claim_time": "2026-11-07T12:05:38Z",
+    "closure_mode": "own_patch",
+    "last_ticket_event": "E-10",
+    "owner": "saipen",
+    "source_receipts": "SRC-001"
+  },
+  "own_problem_keys": [],
+  "problem_count": 0,
+  "project_identity": "v:\\___vac\\__k\\__code\\_plug_script\\vac34_ae_plugs",
+  "project_lineage": "lineage-bd0fe1a39fe1441f88a83421ede30e5c",
+  "receipt_id": "RV-000001",
+  "ruleset_fingerprint": "9a47d608ed3f3a833348aaeeca5cd9e9076f3bf53b1ef92b6ade46958e3e3fec",
+  "ruleset_version": 2,
+  "schema_version": 1,
+  "source_head": "66c0ba85c04c4d40aa422369e559769e1ed1222c",
+  "source_tree_fingerprint": "git-delta-v1:bec83f5d6a9108d1c3ad5319d72adce8b12f37241fdb17ddfcc7ce1e43049dad",
+  "verdict": "PASS",
+  "verification": [
+    {
+      "command": "gh release view v0.0.1",
+      "executed": false,
+      "kind": "attested",
+      "result": "PASS"
+    }
+  ],
+  "verification_contract": {
+    "commands": [
+      "gh release view v0.0.1"
+    ],
+    "findings_digest": "bd24195707716fd285697879eecce6be9e09eda76703d9831510a61e49f80bd1",
+    "gate": "core"
+  },
+  "verification_contract_digest": "ea6164c9a1fa9dda",
+  "verifier": "saipen",
+  "warning_count": 10,
+  "work": "T-1"
+}
